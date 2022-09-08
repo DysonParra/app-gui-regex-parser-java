@@ -12,6 +12,7 @@
 package com.project.dev.regexoperation;
 
 import com.project.dev.regexitem.RegexConcat;
+import com.project.dev.regexitem.RegexConstant;
 import com.project.dev.regexitem.RegexItem;
 import com.project.dev.regexitem.RegexParenthesis;
 import com.project.dev.regexitem.RegexRoot;
@@ -24,9 +25,10 @@ import com.project.dev.regexitem.RegexUnion;
  * @author Dyson Parra
  * @since 1.8
  */
-public class RegexParser {
+public class RegexParser implements RegexConstant {
 
-    private static int[] regexCodes = {0};                                      // Array que servira para agregar un identificador a cada RegexItem que se vaya creando.
+    // usado para agregar un identificador a cada RegexItem que se vaya creando.
+    private static int[] regexCodes = {0};
 
     /**
      * FIXME: Definición de {@code parseString}. Convierte un String en RegexItem.
@@ -135,47 +137,179 @@ public class RegexParser {
         for (int i = index; i < regex.length(); i++) {
             switch (status) {
                 case 0:
-                    status = updateStatus(regex.charAt(i), -1, -1, -1, -1, 8, 6, -1, -1, 2, 1);
+                    status = updateStatus(
+                            regex.charAt(i),
+                            -1,
+                            -1,
+                            -1,
+                            -1,
+                            8,
+                            6,
+                            -1,
+                            -1,
+                            2,
+                            1
+                    );
                     break;
 
                 case 1:
-                    status = updateStatus(regex.charAt(i), -2, -2, -2, -2, -2, -2, -2, 3, -9, -10);
+                    status = updateStatus(
+                            regex.charAt(i),
+                            -2,
+                            -2,
+                            -2,
+                            -2,
+                            -2,
+                            -2,
+                            -2,
+                            3,
+                            -9,
+                            -10
+                    );
                     break;
 
                 case 2:
-                    status = updateStatus(regex.charAt(i), -3, -3, -3, -3, -3, -3, -3, 3, -9, -10);
+                    status = updateStatus(
+                            regex.charAt(i),
+                            -3,
+                            -3,
+                            -3,
+                            -3,
+                            -3,
+                            -3,
+                            -3,
+                            3,
+                            -9,
+                            -10
+                    );
                     break;
 
                 case 3:
-                    status = updateStatus(regex.charAt(i), -4, -4, -4, -4, -4, -4, -4, -4, -9, -10);
+                    status = updateStatus(
+                            regex.charAt(i),
+                            -4,
+                            -4,
+                            -4,
+                            -4,
+                            -4,
+                            -4,
+                            -4,
+                            -4,
+                            -9,
+                            -10
+                    );
                     break;
 
                 case 4:
-                    status = updateStatus(regex.charAt(i), -5, -5, -5, -5, 8, 6, -5, -5, -9, -10);
+                    status = updateStatus(
+                            regex.charAt(i),
+                            -5,
+                            -5,
+                            -5,
+                            -5,
+                            8,
+                            6,
+                            -5,
+                            -5,
+                            -9,
+                            -10
+                    );
                     break;
 
                 case 5:
-                    status = updateStatus(regex.charAt(i), -6, -6, -6, -6, 8, 6, -6, -6, -9, -10);
+                    status = updateStatus(
+                            regex.charAt(i),
+                            -6,
+                            -6,
+                            -6,
+                            -6,
+                            8,
+                            6,
+                            -6,
+                            -6,
+                            -9,
+                            -10
+                    );
                     break;
 
                 case 6:
-                    status = updateStatus(regex.charAt(i), -7, -7, -7, -7, 8, 6, -7, -7, -9, -10);
+                    status = updateStatus(
+                            regex.charAt(i),
+                            -7,
+                            -7,
+                            -7,
+                            -7,
+                            8,
+                            6,
+                            -7,
+                            -7,
+                            -9,
+                            -10
+                    );
                     break;
 
                 case 7:
-                    status = updateStatus(regex.charAt(i), 4, 5, 9, 10, 8, 6, 7, 3, -9, -10);
+                    status = updateStatus(
+                            regex.charAt(i),
+                            4,
+                            5,
+                            9,
+                            10,
+                            8,
+                            6,
+                            7,
+                            3,
+                            -9,
+                            -10
+                    );
                     break;
 
                 case 8:
-                    status = updateStatus(regex.charAt(i), 4, 5, 9, 10, 8, 6, 7, 3, -9, -10);
+                    status = updateStatus(
+                            regex.charAt(i),
+                            4,
+                            5,
+                            9,
+                            10,
+                            8,
+                            6,
+                            7,
+                            3,
+                            -9,
+                            -10
+                    );
                     break;
 
                 case 9:
-                    status = updateStatus(regex.charAt(i), 4, 5, -8, -8, 8, 6, 7, 3, -9, -10);
+                    status = updateStatus(
+                            regex.charAt(i),
+                            4,
+                            5,
+                            -8,
+                            -8,
+                            8,
+                            6,
+                            7,
+                            3,
+                            -9,
+                            -10
+                    );
                     break;
 
                 case 10:
-                    status = updateStatus(regex.charAt(i), 4, 5, -8, -8, 8, 6, 7, 3, -9, -10);
+                    status = updateStatus(
+                            regex.charAt(i),
+                            4,
+                            5,
+                            -8,
+                            -8,
+                            8,
+                            6,
+                            7,
+                            3,
+                            -9,
+                            -10
+                    );
                     break;
 
                 default:

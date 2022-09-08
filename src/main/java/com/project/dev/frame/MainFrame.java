@@ -13,6 +13,7 @@ package com.project.dev.frame;
 
 import com.project.dev.automat.Automat;
 import com.project.dev.automat.operation.AutomatOperator;
+import com.project.dev.regexitem.RegexConstant;
 import com.project.dev.regexitem.RegexItem;
 import com.project.dev.regexoperation.RegexOperator;
 import com.project.dev.regexoperation.RegexParser;
@@ -26,7 +27,7 @@ import javax.swing.JOptionPane;
  * @author Dyson Parra
  * @since 1.8
  */
-public class MainFrame extends javax.swing.JFrame {
+public class MainFrame extends javax.swing.JFrame implements RegexConstant {
 
     private String regexText;
     private RegexItem regex;
@@ -334,13 +335,7 @@ public class MainFrame extends javax.swing.JFrame {
                     break;
                 }
             }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
