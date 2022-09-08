@@ -19,30 +19,30 @@ package com.project.dev.regexitem;
  */
 public interface RegexConstant {
 
-    public static final int REGEX_STATUS_0 = 0;
-    public static final int REGEX_STATUS_1 = 1;
-    public static final int REGEX_STATUS_2 = 2;
-    public static final int REGEX_STATUS_3 = 3;
-    public static final int REGEX_STATUS_4 = 4;
-    public static final int REGEX_STATUS_5 = 5;
-    public static final int REGEX_STATUS_6 = 6;
-    public static final int REGEX_STATUS_7 = 7;
-    public static final int REGEX_STATUS_8 = 8;
-    public static final int REGEX_STATUS_9 = 9;
-    public static final int REGEX_STATUS_10 = 10;
+    public static final int REGEX_STATUS_START = 0;
+    public static final int REGEX_STATUS_NULL_SEQUENCE_READED = 1;
+    public static final int REGEX_STATUS_EMPTY_SEQUENCE_READED = 2;
+    public static final int REGEX_STATUS_END_SEQUENCE_READED = 3;
+    public static final int REGEX_STATUS_UNION_READED = 4;
+    public static final int REGEX_STATUS_CONCAT_READED = 5;
+    public static final int REGEX_STATUS_OPEN_PARENTHESIS_READED = 6;
+    public static final int REGEX_STATUS_CLOSE_PARENTHESIS_READED = 7;
+    public static final int REGEX_STATUS_SYMBOL_READED = 8;
+    public static final int REGEX_STATUS_KLEENE_READED = 9;
+    public static final int REGEX_STATUS_KLEENE_PLUS_READED = 10;
 
-    public static final int REGEX_STATUS_ERROR_1 = -1;
-    public static final int REGEX_STATUS_ERROR_2 = -2;
-    public static final int REGEX_STATUS_ERROR_3 = -3;
-    public static final int REGEX_STATUS_ERROR_4 = -4;
-    public static final int REGEX_STATUS_ERROR_5 = -5;
-    public static final int REGEX_STATUS_ERROR_6 = -6;
-    public static final int REGEX_STATUS_ERROR_7 = -7;
-    public static final int REGEX_STATUS_ERROR_8 = -8;
-    public static final int REGEX_STATUS_ERROR_9 = -9;
-    public static final int REGEX_STATUS_ERROR_10 = -10;
-    public static final int REGEX_STATUS_ERROR_11 = -11;
-    public static final int REGEX_STATUS_ERROR_12 = -12;
-    public static final int REGEX_STATUS_ERROR_13 = -13;
+    public static final int REGEX_STATUS_ERROR_FIRST_CHAR_INVALID = -1;
+    public static final int REGEX_STATUS_ERROR_NEXT_CHAR_AFTER_EMPTY_SEQUENCE_NOT_END_SEQUENCE = -2;
+    public static final int REGEX_STATUS_ERROR_NEXT_CHAR_AFTER_NULL_SEQUENCE_NOT_END_SEQUENCE = -3;
+    public static final int REGEX_STATUS_ERROR_CHAR_AFTER_END_SEQUENCE = -4;
+    public static final int REGEX_STATUS_ERROR_INVALID_CHAR_AFTER_UNION = -5;
+    public static final int REGEX_STATUS_ERROR_INVALID_CHAR_AFTER_CONCAT = -6;
+    public static final int REGEX_STATUS_ERROR_INVALID_CHAR_AFTER_OPEN_PARENTHESIS = -7;
+    public static final int REGEX_STATUS_ERROR_KLEENE_CHAR_AFTER_OTHER_KLEENE_CHAR = -8;
+    public static final int REGEX_STATUS_ERROR_NULL_SEQUENCE_IN_POS_DIFF_AS_FIRST = -9;
+    public static final int REGEX_STATUS_ERROR_EMPTY_SEQUENCE_IN_POS_DIFF_AS_FIRST = -10;
+    public static final int REGEX_STATUS_ERROR_MORE_OPEN_THAT_CLOSE_PARENTHESIS = -11;
+    public static final int REGEX_STATUS_ERROR_MORE_CLOSE_THAT_OPEN_PARENTHESIS = -12;
+    public static final int REGEX_STATUS_ERROR_LAST_CHAR_IS_NOT_END_SEQUENCE = -13;
 
 }

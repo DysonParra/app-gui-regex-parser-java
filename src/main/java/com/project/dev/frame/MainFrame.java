@@ -64,67 +64,67 @@ public class MainFrame extends javax.swing.JFrame implements RegexConstant {
                     + ":  " + jTextRegex.getText().charAt(pos) + "\n");
 
             switch (logCode) {
-                case REGEX_STATUS_ERROR_1:
+                case REGEX_STATUS_ERROR_FIRST_CHAR_INVALID:
                     jTextRegexResult.setText(jTextRegexResult.getText()
                             + "El primer caracter debe ser diferente a:   |.*+)\\\n\n");
                     break;
 
-                case REGEX_STATUS_ERROR_2:
+                case REGEX_STATUS_ERROR_NEXT_CHAR_AFTER_EMPTY_SEQUENCE_NOT_END_SEQUENCE:
                     jTextRegexResult.setText(jTextRegexResult.getText()
                             + "No puede escribir algun caracter diferente a fin de secuencia luego de indicar que es una secuencia vacia.\n\n");
                     break;
 
-                case REGEX_STATUS_ERROR_3:
+                case REGEX_STATUS_ERROR_NEXT_CHAR_AFTER_NULL_SEQUENCE_NOT_END_SEQUENCE:
                     jTextRegexResult.setText(jTextRegexResult.getText()
                             + "No puede escribir algun caracter diferente a fin de secuencia luego de indicar que es la secuencia nula.\n\n");
                     break;
 
-                case REGEX_STATUS_ERROR_4:
+                case REGEX_STATUS_ERROR_CHAR_AFTER_END_SEQUENCE:
                     jTextRegexResult.setText(jTextRegexResult.getText()
                             + "No puede escribir caracteres luego del caracter de fin de secuencia.\n\n");
                     break;
 
-                case REGEX_STATUS_ERROR_5:
+                case REGEX_STATUS_ERROR_INVALID_CHAR_AFTER_UNION:
                     jTextRegexResult.setText(jTextRegexResult.getText()
                             + "Luego del caracter de union solo puede escribir un caracter diferente a:   |.*+)\\$@\n\n");
                     break;
 
-                case REGEX_STATUS_ERROR_6:
+                case REGEX_STATUS_ERROR_INVALID_CHAR_AFTER_CONCAT:
                     jTextRegexResult.setText(jTextRegexResult.getText()
                             + "Luego del caracter de concatenacion solo puede escribir un caracter diferente a:   |.*+)\\$@\n\n");
                     break;
 
-                case REGEX_STATUS_ERROR_7:
+                case REGEX_STATUS_ERROR_INVALID_CHAR_AFTER_OPEN_PARENTHESIS:
                     jTextRegexResult.setText(jTextRegexResult.getText()
                             + "Luego de abrir un parentesis solo puede escribir un caracter diferente a:   |.*+)\\$@\n\n");
                     break;
 
-                case REGEX_STATUS_ERROR_8:
+                case REGEX_STATUS_ERROR_KLEENE_CHAR_AFTER_OTHER_KLEENE_CHAR:
                     jTextRegexResult.setText(jTextRegexResult.getText()
                             + "No puede escribir dos caracteres de kleene *+ juntos.\n\n");
                     break;
 
-                case REGEX_STATUS_ERROR_9:
+                case REGEX_STATUS_ERROR_NULL_SEQUENCE_IN_POS_DIFF_AS_FIRST:
                     jTextRegexResult.setText(jTextRegexResult.getText()
                             + "No puede escribir el caracter de secuencia nula luego de escribir algun otro caracter.\n\n");
                     break;
 
-                case REGEX_STATUS_ERROR_10:
+                case REGEX_STATUS_ERROR_EMPTY_SEQUENCE_IN_POS_DIFF_AS_FIRST:
                     jTextRegexResult.setText(jTextRegexResult.getText()
                             + "No puede escribir el caracter de secuencia vacia luego de escribir algun otro caracter.\n\n");
                     break;
 
-                case REGEX_STATUS_ERROR_11:
+                case REGEX_STATUS_ERROR_MORE_OPEN_THAT_CLOSE_PARENTHESIS:
                     jTextRegexResult.setText(jTextRegexResult.getText()
                             + "Hay mas parentesis de apertura que de cierre.\n\n");
                     break;
 
-                case REGEX_STATUS_ERROR_12:
+                case REGEX_STATUS_ERROR_MORE_CLOSE_THAT_OPEN_PARENTHESIS:
                     jTextRegexResult.setText(jTextRegexResult.getText()
                             + "Hay mas parentesis de cierre que de apertura.\n\n");
                     break;
 
-                case REGEX_STATUS_ERROR_13:
+                case REGEX_STATUS_ERROR_LAST_CHAR_IS_NOT_END_SEQUENCE:
                     jTextRegexResult.setText(jTextRegexResult.getText()
                             + "El ultimo caracter debe ser fin de secuencia:   \\.\n\n");
                     break;

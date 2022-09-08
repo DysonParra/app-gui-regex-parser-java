@@ -41,7 +41,7 @@ public class RegexParser implements RegexConstant {
         RegexItem root = new RegexRoot();                                                   // Crea la raiz de los RegexItem.
         root.setValue(regex);                                                               // Asigna valor a root.
         regexCodes[0] = 0;
-        int[] result = new RegexParser().parseRegexItem(regex, root, 0, REGEX_STATUS_0);    // Intenta convertir el String en RegexItem.
+        int[] result = new RegexParser().parseRegexItem(regex, root, 0, REGEX_STATUS_START);    // Intenta convertir el String en RegexItem.
 
         //System.out.println("Final :" + result[0] + " " + result[1]);
         /*
@@ -50,24 +50,24 @@ public class RegexParser implements RegexConstant {
          * RegexPrinter.printRegex(root); System.out.println("");
          */
         switch(result[0]) {
-            case REGEX_STATUS_ERROR_1:
-            case REGEX_STATUS_ERROR_2:
-            case REGEX_STATUS_ERROR_3:
-            case REGEX_STATUS_ERROR_4:
-            case REGEX_STATUS_ERROR_5:
-            case REGEX_STATUS_ERROR_6:
-            case REGEX_STATUS_ERROR_7:
-            case REGEX_STATUS_ERROR_8:
-            case REGEX_STATUS_ERROR_9:
-            case REGEX_STATUS_ERROR_10:
-            case REGEX_STATUS_ERROR_11:
-            case REGEX_STATUS_ERROR_12:
-            case REGEX_STATUS_ERROR_13:
+            case REGEX_STATUS_ERROR_FIRST_CHAR_INVALID:
+            case REGEX_STATUS_ERROR_NEXT_CHAR_AFTER_EMPTY_SEQUENCE_NOT_END_SEQUENCE:
+            case REGEX_STATUS_ERROR_NEXT_CHAR_AFTER_NULL_SEQUENCE_NOT_END_SEQUENCE:
+            case REGEX_STATUS_ERROR_CHAR_AFTER_END_SEQUENCE:
+            case REGEX_STATUS_ERROR_INVALID_CHAR_AFTER_UNION:
+            case REGEX_STATUS_ERROR_INVALID_CHAR_AFTER_CONCAT:
+            case REGEX_STATUS_ERROR_INVALID_CHAR_AFTER_OPEN_PARENTHESIS:
+            case REGEX_STATUS_ERROR_KLEENE_CHAR_AFTER_OTHER_KLEENE_CHAR:
+            case REGEX_STATUS_ERROR_NULL_SEQUENCE_IN_POS_DIFF_AS_FIRST:
+            case REGEX_STATUS_ERROR_EMPTY_SEQUENCE_IN_POS_DIFF_AS_FIRST:
+            case REGEX_STATUS_ERROR_MORE_OPEN_THAT_CLOSE_PARENTHESIS:
+            case REGEX_STATUS_ERROR_MORE_CLOSE_THAT_OPEN_PARENTHESIS:
+            case REGEX_STATUS_ERROR_LAST_CHAR_IS_NOT_END_SEQUENCE:
                 // Devuelve el código de error y el número de caracter que lo generó.
                 return result;
 
             default:
-                // Devuelve la raiz de la expresion.  
+                // Devuelve la raiz de la expresion.
                 return root;
         }
     }
@@ -153,179 +153,179 @@ public class RegexParser implements RegexConstant {
 
         for (int i = index; i < regex.length(); i++) {
             switch (status) {
-                case REGEX_STATUS_0:
+                case REGEX_STATUS_START:
                     status = updateStatus(
                             regex.charAt(i),
-                            REGEX_STATUS_ERROR_1,
-                            REGEX_STATUS_ERROR_1,
-                            REGEX_STATUS_ERROR_1,
-                            REGEX_STATUS_ERROR_1,
-                            REGEX_STATUS_8,
-                            REGEX_STATUS_6,
-                            REGEX_STATUS_ERROR_1,
-                            REGEX_STATUS_ERROR_1,
-                            REGEX_STATUS_2,
-                            REGEX_STATUS_1
+                            REGEX_STATUS_ERROR_FIRST_CHAR_INVALID,
+                            REGEX_STATUS_ERROR_FIRST_CHAR_INVALID,
+                            REGEX_STATUS_ERROR_FIRST_CHAR_INVALID,
+                            REGEX_STATUS_ERROR_FIRST_CHAR_INVALID,
+                            REGEX_STATUS_SYMBOL_READED,
+                            REGEX_STATUS_OPEN_PARENTHESIS_READED,
+                            REGEX_STATUS_ERROR_FIRST_CHAR_INVALID,
+                            REGEX_STATUS_ERROR_FIRST_CHAR_INVALID,
+                            REGEX_STATUS_EMPTY_SEQUENCE_READED,
+                            REGEX_STATUS_NULL_SEQUENCE_READED
                     );
                     break;
 
-                case REGEX_STATUS_1:
+                case REGEX_STATUS_NULL_SEQUENCE_READED:
                     status = updateStatus(
                             regex.charAt(i),
-                            REGEX_STATUS_ERROR_2,
-                            REGEX_STATUS_ERROR_2,
-                            REGEX_STATUS_ERROR_2,
-                            REGEX_STATUS_ERROR_2,
-                            REGEX_STATUS_ERROR_2,
-                            REGEX_STATUS_ERROR_2,
-                            REGEX_STATUS_ERROR_2,
-                            REGEX_STATUS_3,
-                            REGEX_STATUS_ERROR_9,
-                            REGEX_STATUS_ERROR_10
+                            REGEX_STATUS_ERROR_NEXT_CHAR_AFTER_EMPTY_SEQUENCE_NOT_END_SEQUENCE,
+                            REGEX_STATUS_ERROR_NEXT_CHAR_AFTER_EMPTY_SEQUENCE_NOT_END_SEQUENCE,
+                            REGEX_STATUS_ERROR_NEXT_CHAR_AFTER_EMPTY_SEQUENCE_NOT_END_SEQUENCE,
+                            REGEX_STATUS_ERROR_NEXT_CHAR_AFTER_EMPTY_SEQUENCE_NOT_END_SEQUENCE,
+                            REGEX_STATUS_ERROR_NEXT_CHAR_AFTER_EMPTY_SEQUENCE_NOT_END_SEQUENCE,
+                            REGEX_STATUS_ERROR_NEXT_CHAR_AFTER_EMPTY_SEQUENCE_NOT_END_SEQUENCE,
+                            REGEX_STATUS_ERROR_NEXT_CHAR_AFTER_EMPTY_SEQUENCE_NOT_END_SEQUENCE,
+                            REGEX_STATUS_END_SEQUENCE_READED,
+                            REGEX_STATUS_ERROR_NULL_SEQUENCE_IN_POS_DIFF_AS_FIRST,
+                            REGEX_STATUS_ERROR_EMPTY_SEQUENCE_IN_POS_DIFF_AS_FIRST
                     );
                     break;
 
-                case REGEX_STATUS_2:
+                case REGEX_STATUS_EMPTY_SEQUENCE_READED:
                     status = updateStatus(
                             regex.charAt(i),
-                            REGEX_STATUS_ERROR_3,
-                            REGEX_STATUS_ERROR_3,
-                            REGEX_STATUS_ERROR_3,
-                            REGEX_STATUS_ERROR_3,
-                            REGEX_STATUS_ERROR_3,
-                            REGEX_STATUS_ERROR_3,
-                            REGEX_STATUS_ERROR_3,
-                            REGEX_STATUS_3,
-                            REGEX_STATUS_ERROR_9,
-                            REGEX_STATUS_ERROR_10
+                            REGEX_STATUS_ERROR_NEXT_CHAR_AFTER_NULL_SEQUENCE_NOT_END_SEQUENCE,
+                            REGEX_STATUS_ERROR_NEXT_CHAR_AFTER_NULL_SEQUENCE_NOT_END_SEQUENCE,
+                            REGEX_STATUS_ERROR_NEXT_CHAR_AFTER_NULL_SEQUENCE_NOT_END_SEQUENCE,
+                            REGEX_STATUS_ERROR_NEXT_CHAR_AFTER_NULL_SEQUENCE_NOT_END_SEQUENCE,
+                            REGEX_STATUS_ERROR_NEXT_CHAR_AFTER_NULL_SEQUENCE_NOT_END_SEQUENCE,
+                            REGEX_STATUS_ERROR_NEXT_CHAR_AFTER_NULL_SEQUENCE_NOT_END_SEQUENCE,
+                            REGEX_STATUS_ERROR_NEXT_CHAR_AFTER_NULL_SEQUENCE_NOT_END_SEQUENCE,
+                            REGEX_STATUS_END_SEQUENCE_READED,
+                            REGEX_STATUS_ERROR_NULL_SEQUENCE_IN_POS_DIFF_AS_FIRST,
+                            REGEX_STATUS_ERROR_EMPTY_SEQUENCE_IN_POS_DIFF_AS_FIRST
                     );
                     break;
 
-                case REGEX_STATUS_3:
+                case REGEX_STATUS_END_SEQUENCE_READED:
                     status = updateStatus(
                             regex.charAt(i),
-                            REGEX_STATUS_ERROR_4,
-                            REGEX_STATUS_ERROR_4,
-                            REGEX_STATUS_ERROR_4,
-                            REGEX_STATUS_ERROR_4,
-                            REGEX_STATUS_ERROR_4,
-                            REGEX_STATUS_ERROR_4,
-                            REGEX_STATUS_ERROR_4,
-                            REGEX_STATUS_ERROR_4,
-                            REGEX_STATUS_ERROR_9,
-                            REGEX_STATUS_ERROR_10
+                            REGEX_STATUS_ERROR_CHAR_AFTER_END_SEQUENCE,
+                            REGEX_STATUS_ERROR_CHAR_AFTER_END_SEQUENCE,
+                            REGEX_STATUS_ERROR_CHAR_AFTER_END_SEQUENCE,
+                            REGEX_STATUS_ERROR_CHAR_AFTER_END_SEQUENCE,
+                            REGEX_STATUS_ERROR_CHAR_AFTER_END_SEQUENCE,
+                            REGEX_STATUS_ERROR_CHAR_AFTER_END_SEQUENCE,
+                            REGEX_STATUS_ERROR_CHAR_AFTER_END_SEQUENCE,
+                            REGEX_STATUS_ERROR_CHAR_AFTER_END_SEQUENCE,
+                            REGEX_STATUS_ERROR_NULL_SEQUENCE_IN_POS_DIFF_AS_FIRST,
+                            REGEX_STATUS_ERROR_EMPTY_SEQUENCE_IN_POS_DIFF_AS_FIRST
                     );
                     break;
 
-                case REGEX_STATUS_4:
+                case REGEX_STATUS_UNION_READED:
                     status = updateStatus(
                             regex.charAt(i),
-                            REGEX_STATUS_ERROR_5,
-                            REGEX_STATUS_ERROR_5,
-                            REGEX_STATUS_ERROR_5,
-                            REGEX_STATUS_ERROR_5,
-                            REGEX_STATUS_8,
-                            REGEX_STATUS_6,
-                            REGEX_STATUS_ERROR_5,
-                            REGEX_STATUS_ERROR_5,
-                            REGEX_STATUS_ERROR_9,
-                            REGEX_STATUS_ERROR_10
+                            REGEX_STATUS_ERROR_INVALID_CHAR_AFTER_UNION,
+                            REGEX_STATUS_ERROR_INVALID_CHAR_AFTER_UNION,
+                            REGEX_STATUS_ERROR_INVALID_CHAR_AFTER_UNION,
+                            REGEX_STATUS_ERROR_INVALID_CHAR_AFTER_UNION,
+                            REGEX_STATUS_SYMBOL_READED,
+                            REGEX_STATUS_OPEN_PARENTHESIS_READED,
+                            REGEX_STATUS_ERROR_INVALID_CHAR_AFTER_UNION,
+                            REGEX_STATUS_ERROR_INVALID_CHAR_AFTER_UNION,
+                            REGEX_STATUS_ERROR_NULL_SEQUENCE_IN_POS_DIFF_AS_FIRST,
+                            REGEX_STATUS_ERROR_EMPTY_SEQUENCE_IN_POS_DIFF_AS_FIRST
                     );
                     break;
 
-                case REGEX_STATUS_5:
+                case REGEX_STATUS_CONCAT_READED:
                     status = updateStatus(
                             regex.charAt(i),
-                            REGEX_STATUS_ERROR_6,
-                            REGEX_STATUS_ERROR_6,
-                            REGEX_STATUS_ERROR_6,
-                            REGEX_STATUS_ERROR_6,
-                            REGEX_STATUS_8,
-                            REGEX_STATUS_6,
-                            REGEX_STATUS_ERROR_6,
-                            REGEX_STATUS_ERROR_6,
-                            REGEX_STATUS_ERROR_9,
-                            REGEX_STATUS_ERROR_10
+                            REGEX_STATUS_ERROR_INVALID_CHAR_AFTER_CONCAT,
+                            REGEX_STATUS_ERROR_INVALID_CHAR_AFTER_CONCAT,
+                            REGEX_STATUS_ERROR_INVALID_CHAR_AFTER_CONCAT,
+                            REGEX_STATUS_ERROR_INVALID_CHAR_AFTER_CONCAT,
+                            REGEX_STATUS_SYMBOL_READED,
+                            REGEX_STATUS_OPEN_PARENTHESIS_READED,
+                            REGEX_STATUS_ERROR_INVALID_CHAR_AFTER_CONCAT,
+                            REGEX_STATUS_ERROR_INVALID_CHAR_AFTER_CONCAT,
+                            REGEX_STATUS_ERROR_NULL_SEQUENCE_IN_POS_DIFF_AS_FIRST,
+                            REGEX_STATUS_ERROR_EMPTY_SEQUENCE_IN_POS_DIFF_AS_FIRST
                     );
                     break;
 
-                case REGEX_STATUS_6:
+                case REGEX_STATUS_OPEN_PARENTHESIS_READED:
                     status = updateStatus(
                             regex.charAt(i),
-                            REGEX_STATUS_ERROR_7,
-                            REGEX_STATUS_ERROR_7,
-                            REGEX_STATUS_ERROR_7,
-                            REGEX_STATUS_ERROR_7,
-                            REGEX_STATUS_8,
-                            REGEX_STATUS_6,
-                            REGEX_STATUS_ERROR_7,
-                            REGEX_STATUS_ERROR_7,
-                            REGEX_STATUS_ERROR_9,
-                            REGEX_STATUS_ERROR_10
+                            REGEX_STATUS_ERROR_INVALID_CHAR_AFTER_OPEN_PARENTHESIS,
+                            REGEX_STATUS_ERROR_INVALID_CHAR_AFTER_OPEN_PARENTHESIS,
+                            REGEX_STATUS_ERROR_INVALID_CHAR_AFTER_OPEN_PARENTHESIS,
+                            REGEX_STATUS_ERROR_INVALID_CHAR_AFTER_OPEN_PARENTHESIS,
+                            REGEX_STATUS_SYMBOL_READED,
+                            REGEX_STATUS_OPEN_PARENTHESIS_READED,
+                            REGEX_STATUS_ERROR_INVALID_CHAR_AFTER_OPEN_PARENTHESIS,
+                            REGEX_STATUS_ERROR_INVALID_CHAR_AFTER_OPEN_PARENTHESIS,
+                            REGEX_STATUS_ERROR_NULL_SEQUENCE_IN_POS_DIFF_AS_FIRST,
+                            REGEX_STATUS_ERROR_EMPTY_SEQUENCE_IN_POS_DIFF_AS_FIRST
                     );
                     break;
 
-                case REGEX_STATUS_7:
+                case REGEX_STATUS_CLOSE_PARENTHESIS_READED:
                     status = updateStatus(
                             regex.charAt(i),
-                            REGEX_STATUS_4,
-                            REGEX_STATUS_5,
-                            REGEX_STATUS_9,
-                            REGEX_STATUS_10,
-                            REGEX_STATUS_8,
-                            REGEX_STATUS_6,
-                            REGEX_STATUS_7,
-                            REGEX_STATUS_3,
-                            REGEX_STATUS_ERROR_9,
-                            REGEX_STATUS_ERROR_10
+                            REGEX_STATUS_UNION_READED,
+                            REGEX_STATUS_CONCAT_READED,
+                            REGEX_STATUS_KLEENE_READED,
+                            REGEX_STATUS_KLEENE_PLUS_READED,
+                            REGEX_STATUS_SYMBOL_READED,
+                            REGEX_STATUS_OPEN_PARENTHESIS_READED,
+                            REGEX_STATUS_CLOSE_PARENTHESIS_READED,
+                            REGEX_STATUS_END_SEQUENCE_READED,
+                            REGEX_STATUS_ERROR_NULL_SEQUENCE_IN_POS_DIFF_AS_FIRST,
+                            REGEX_STATUS_ERROR_EMPTY_SEQUENCE_IN_POS_DIFF_AS_FIRST
                     );
                     break;
 
-                case REGEX_STATUS_8:
+                case REGEX_STATUS_SYMBOL_READED:
                     status = updateStatus(
                             regex.charAt(i),
-                            REGEX_STATUS_4,
-                            REGEX_STATUS_5,
-                            REGEX_STATUS_9,
-                            REGEX_STATUS_10,
-                            REGEX_STATUS_8,
-                            REGEX_STATUS_6,
-                            REGEX_STATUS_7,
-                            REGEX_STATUS_3,
-                            REGEX_STATUS_ERROR_9,
-                            REGEX_STATUS_ERROR_10
+                            REGEX_STATUS_UNION_READED,
+                            REGEX_STATUS_CONCAT_READED,
+                            REGEX_STATUS_KLEENE_READED,
+                            REGEX_STATUS_KLEENE_PLUS_READED,
+                            REGEX_STATUS_SYMBOL_READED,
+                            REGEX_STATUS_OPEN_PARENTHESIS_READED,
+                            REGEX_STATUS_CLOSE_PARENTHESIS_READED,
+                            REGEX_STATUS_END_SEQUENCE_READED,
+                            REGEX_STATUS_ERROR_NULL_SEQUENCE_IN_POS_DIFF_AS_FIRST,
+                            REGEX_STATUS_ERROR_EMPTY_SEQUENCE_IN_POS_DIFF_AS_FIRST
                     );
                     break;
 
-                case REGEX_STATUS_9:
+                case REGEX_STATUS_KLEENE_READED:
                     status = updateStatus(
                             regex.charAt(i),
-                            REGEX_STATUS_4,
-                            REGEX_STATUS_5,
-                            REGEX_STATUS_ERROR_8,
-                            REGEX_STATUS_ERROR_8,
-                            REGEX_STATUS_8,
-                            REGEX_STATUS_6,
-                            REGEX_STATUS_7,
-                            REGEX_STATUS_3,
-                            REGEX_STATUS_ERROR_9,
-                            REGEX_STATUS_ERROR_10
+                            REGEX_STATUS_UNION_READED,
+                            REGEX_STATUS_CONCAT_READED,
+                            REGEX_STATUS_ERROR_KLEENE_CHAR_AFTER_OTHER_KLEENE_CHAR,
+                            REGEX_STATUS_ERROR_KLEENE_CHAR_AFTER_OTHER_KLEENE_CHAR,
+                            REGEX_STATUS_SYMBOL_READED,
+                            REGEX_STATUS_OPEN_PARENTHESIS_READED,
+                            REGEX_STATUS_CLOSE_PARENTHESIS_READED,
+                            REGEX_STATUS_END_SEQUENCE_READED,
+                            REGEX_STATUS_ERROR_NULL_SEQUENCE_IN_POS_DIFF_AS_FIRST,
+                            REGEX_STATUS_ERROR_EMPTY_SEQUENCE_IN_POS_DIFF_AS_FIRST
                     );
                     break;
 
-                case REGEX_STATUS_10:
+                case REGEX_STATUS_KLEENE_PLUS_READED:
                     status = updateStatus(
                             regex.charAt(i),
-                            REGEX_STATUS_4,
-                            REGEX_STATUS_5,
-                            REGEX_STATUS_ERROR_8,
-                            REGEX_STATUS_ERROR_8,
-                            REGEX_STATUS_8,
-                            REGEX_STATUS_6,
-                            REGEX_STATUS_7,
-                            REGEX_STATUS_3,
-                            REGEX_STATUS_ERROR_9,
-                            REGEX_STATUS_ERROR_10
+                            REGEX_STATUS_UNION_READED,
+                            REGEX_STATUS_CONCAT_READED,
+                            REGEX_STATUS_ERROR_KLEENE_CHAR_AFTER_OTHER_KLEENE_CHAR,
+                            REGEX_STATUS_ERROR_KLEENE_CHAR_AFTER_OTHER_KLEENE_CHAR,
+                            REGEX_STATUS_SYMBOL_READED,
+                            REGEX_STATUS_OPEN_PARENTHESIS_READED,
+                            REGEX_STATUS_CLOSE_PARENTHESIS_READED,
+                            REGEX_STATUS_END_SEQUENCE_READED,
+                            REGEX_STATUS_ERROR_NULL_SEQUENCE_IN_POS_DIFF_AS_FIRST,
+                            REGEX_STATUS_ERROR_EMPTY_SEQUENCE_IN_POS_DIFF_AS_FIRST
                     );
                     break;
 
@@ -335,51 +335,51 @@ public class RegexParser implements RegexConstant {
 
             //System.out.println(i + " " + regex.charAt(i) + " " + status);
             switch (status) {
-                case REGEX_STATUS_0:
+                case REGEX_STATUS_START:
                     return new int[]{status, i};
 
-                case REGEX_STATUS_1:
+                case REGEX_STATUS_NULL_SEQUENCE_READED:
                     break;
 
-                case REGEX_STATUS_2:
+                case REGEX_STATUS_EMPTY_SEQUENCE_READED:
                     break;
 
-                case REGEX_STATUS_3:
+                case REGEX_STATUS_END_SEQUENCE_READED:
                     break;
 
-                case REGEX_STATUS_4:
+                case REGEX_STATUS_UNION_READED:
                     item = new RegexUnion(++regexCodes[0], father);
                     break;
 
-                case REGEX_STATUS_5:
+                case REGEX_STATUS_CONCAT_READED:
                     item = new RegexConcat(++regexCodes[0], father);
                     break;
 
-                case REGEX_STATUS_6:
+                case REGEX_STATUS_OPEN_PARENTHESIS_READED:
                     item = new RegexParenthesis(++regexCodes[0], father);
                     result = parseRegexItem(regex, item, i + 1, status);
                     status = result[0];
                     i = result[1];
                     break;
 
-                case REGEX_STATUS_7:
+                case REGEX_STATUS_CLOSE_PARENTHESIS_READED:
                     if (!"Root".equals(father.getType()))
                         return new int[]{status, i};
                     else
-                        return new int[]{REGEX_STATUS_ERROR_12, i};
+                        return new int[]{REGEX_STATUS_ERROR_MORE_CLOSE_THAT_OPEN_PARENTHESIS, i};
 
-                case REGEX_STATUS_8:
+                case REGEX_STATUS_SYMBOL_READED:
                     item = new RegexSymbol(++regexCodes[0], father);
                     item.setValue(regex.substring(i, i + 1));
                     break;
 
-                case REGEX_STATUS_9:
+                case REGEX_STATUS_KLEENE_READED:
                     if (item != null)
                         item.setKleeneType(2);
                     item = null;
                     break;
 
-                case REGEX_STATUS_10:
+                case REGEX_STATUS_KLEENE_PLUS_READED:
                     if (item != null)
                         item.setKleeneType(1);
                     item = null;
@@ -401,8 +401,8 @@ public class RegexParser implements RegexConstant {
                 }
                 return new int[]{status, regex.length() - 1};
             } else
-                return new int[]{REGEX_STATUS_ERROR_13, regex.length() - 1};
+                return new int[]{REGEX_STATUS_ERROR_LAST_CHAR_IS_NOT_END_SEQUENCE, regex.length() - 1};
         } else
-            return new int[]{REGEX_STATUS_ERROR_11, 0};
+            return new int[]{REGEX_STATUS_ERROR_MORE_OPEN_THAT_CLOSE_PARENTHESIS, 0};
     }
 }
