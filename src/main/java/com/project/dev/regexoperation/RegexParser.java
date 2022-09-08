@@ -38,10 +38,10 @@ public class RegexParser implements RegexConstant {
      *         posicion del caracter que lo genero.
      */
     public static Object parseString(String regex) {
-        RegexItem root = new RegexRoot();                                       // Crea la raiz de los RegexItem.
-        root.setValue(regex);                                                   // Asigna valor a root.
+        RegexItem root = new RegexRoot();                                                   // Crea la raiz de los RegexItem.
+        root.setValue(regex);                                                               // Asigna valor a root.
         regexCodes[0] = 0;
-        int[] result = new RegexParser().parseRegexItem(regex, root, 0, 0);     // Intenta convertir el String en RegexItem.
+        int[] result = new RegexParser().parseRegexItem(regex, root, 0, REGEX_STATUS_0);    // Intenta convertir el String en RegexItem.
 
         //System.out.println("Final :" + result[0] + " " + result[1]);
         /*
@@ -49,10 +49,27 @@ public class RegexParser implements RegexConstant {
          * root.printRegexItem(root.findMaxLevel(root.getLevel())); System.out.println("");
          * RegexPrinter.printRegex(root); System.out.println("");
          */
-        if (result[0] < 0)                                                      // Si la expresion regular no es valida.
-            return result;                                                      // Devuelve result indicando el codigo de eeror el numero de caracter que lo genero.
-        else                                                                    // Si la expresion es valida.
-            return root;                                                        // Devuelve la raiz de la expresion.
+        switch(result[0]) {
+            case REGEX_STATUS_ERROR_1:
+            case REGEX_STATUS_ERROR_2:
+            case REGEX_STATUS_ERROR_3:
+            case REGEX_STATUS_ERROR_4:
+            case REGEX_STATUS_ERROR_5:
+            case REGEX_STATUS_ERROR_6:
+            case REGEX_STATUS_ERROR_7:
+            case REGEX_STATUS_ERROR_8:
+            case REGEX_STATUS_ERROR_9:
+            case REGEX_STATUS_ERROR_10:
+            case REGEX_STATUS_ERROR_11:
+            case REGEX_STATUS_ERROR_12:
+            case REGEX_STATUS_ERROR_13:
+                // Devuelve el código de error y el número de caracter que lo generó.
+                return result;
+
+            default:
+                // Devuelve la raiz de la expresion.  
+                return root;
+        }
     }
 
     /**
@@ -136,179 +153,179 @@ public class RegexParser implements RegexConstant {
 
         for (int i = index; i < regex.length(); i++) {
             switch (status) {
-                case 0:
+                case REGEX_STATUS_0:
                     status = updateStatus(
                             regex.charAt(i),
-                            -1,
-                            -1,
-                            -1,
-                            -1,
-                            8,
-                            6,
-                            -1,
-                            -1,
-                            2,
-                            1
+                            REGEX_STATUS_ERROR_1,
+                            REGEX_STATUS_ERROR_1,
+                            REGEX_STATUS_ERROR_1,
+                            REGEX_STATUS_ERROR_1,
+                            REGEX_STATUS_8,
+                            REGEX_STATUS_6,
+                            REGEX_STATUS_ERROR_1,
+                            REGEX_STATUS_ERROR_1,
+                            REGEX_STATUS_2,
+                            REGEX_STATUS_1
                     );
                     break;
 
-                case 1:
+                case REGEX_STATUS_1:
                     status = updateStatus(
                             regex.charAt(i),
-                            -2,
-                            -2,
-                            -2,
-                            -2,
-                            -2,
-                            -2,
-                            -2,
-                            3,
-                            -9,
-                            -10
+                            REGEX_STATUS_ERROR_2,
+                            REGEX_STATUS_ERROR_2,
+                            REGEX_STATUS_ERROR_2,
+                            REGEX_STATUS_ERROR_2,
+                            REGEX_STATUS_ERROR_2,
+                            REGEX_STATUS_ERROR_2,
+                            REGEX_STATUS_ERROR_2,
+                            REGEX_STATUS_3,
+                            REGEX_STATUS_ERROR_9,
+                            REGEX_STATUS_ERROR_10
                     );
                     break;
 
-                case 2:
+                case REGEX_STATUS_2:
                     status = updateStatus(
                             regex.charAt(i),
-                            -3,
-                            -3,
-                            -3,
-                            -3,
-                            -3,
-                            -3,
-                            -3,
-                            3,
-                            -9,
-                            -10
+                            REGEX_STATUS_ERROR_3,
+                            REGEX_STATUS_ERROR_3,
+                            REGEX_STATUS_ERROR_3,
+                            REGEX_STATUS_ERROR_3,
+                            REGEX_STATUS_ERROR_3,
+                            REGEX_STATUS_ERROR_3,
+                            REGEX_STATUS_ERROR_3,
+                            REGEX_STATUS_3,
+                            REGEX_STATUS_ERROR_9,
+                            REGEX_STATUS_ERROR_10
                     );
                     break;
 
-                case 3:
+                case REGEX_STATUS_3:
                     status = updateStatus(
                             regex.charAt(i),
-                            -4,
-                            -4,
-                            -4,
-                            -4,
-                            -4,
-                            -4,
-                            -4,
-                            -4,
-                            -9,
-                            -10
+                            REGEX_STATUS_ERROR_4,
+                            REGEX_STATUS_ERROR_4,
+                            REGEX_STATUS_ERROR_4,
+                            REGEX_STATUS_ERROR_4,
+                            REGEX_STATUS_ERROR_4,
+                            REGEX_STATUS_ERROR_4,
+                            REGEX_STATUS_ERROR_4,
+                            REGEX_STATUS_ERROR_4,
+                            REGEX_STATUS_ERROR_9,
+                            REGEX_STATUS_ERROR_10
                     );
                     break;
 
-                case 4:
+                case REGEX_STATUS_4:
                     status = updateStatus(
                             regex.charAt(i),
-                            -5,
-                            -5,
-                            -5,
-                            -5,
-                            8,
-                            6,
-                            -5,
-                            -5,
-                            -9,
-                            -10
+                            REGEX_STATUS_ERROR_5,
+                            REGEX_STATUS_ERROR_5,
+                            REGEX_STATUS_ERROR_5,
+                            REGEX_STATUS_ERROR_5,
+                            REGEX_STATUS_8,
+                            REGEX_STATUS_6,
+                            REGEX_STATUS_ERROR_5,
+                            REGEX_STATUS_ERROR_5,
+                            REGEX_STATUS_ERROR_9,
+                            REGEX_STATUS_ERROR_10
                     );
                     break;
 
-                case 5:
+                case REGEX_STATUS_5:
                     status = updateStatus(
                             regex.charAt(i),
-                            -6,
-                            -6,
-                            -6,
-                            -6,
-                            8,
-                            6,
-                            -6,
-                            -6,
-                            -9,
-                            -10
+                            REGEX_STATUS_ERROR_6,
+                            REGEX_STATUS_ERROR_6,
+                            REGEX_STATUS_ERROR_6,
+                            REGEX_STATUS_ERROR_6,
+                            REGEX_STATUS_8,
+                            REGEX_STATUS_6,
+                            REGEX_STATUS_ERROR_6,
+                            REGEX_STATUS_ERROR_6,
+                            REGEX_STATUS_ERROR_9,
+                            REGEX_STATUS_ERROR_10
                     );
                     break;
 
-                case 6:
+                case REGEX_STATUS_6:
                     status = updateStatus(
                             regex.charAt(i),
-                            -7,
-                            -7,
-                            -7,
-                            -7,
-                            8,
-                            6,
-                            -7,
-                            -7,
-                            -9,
-                            -10
+                            REGEX_STATUS_ERROR_7,
+                            REGEX_STATUS_ERROR_7,
+                            REGEX_STATUS_ERROR_7,
+                            REGEX_STATUS_ERROR_7,
+                            REGEX_STATUS_8,
+                            REGEX_STATUS_6,
+                            REGEX_STATUS_ERROR_7,
+                            REGEX_STATUS_ERROR_7,
+                            REGEX_STATUS_ERROR_9,
+                            REGEX_STATUS_ERROR_10
                     );
                     break;
 
-                case 7:
+                case REGEX_STATUS_7:
                     status = updateStatus(
                             regex.charAt(i),
-                            4,
-                            5,
-                            9,
-                            10,
-                            8,
-                            6,
-                            7,
-                            3,
-                            -9,
-                            -10
+                            REGEX_STATUS_4,
+                            REGEX_STATUS_5,
+                            REGEX_STATUS_9,
+                            REGEX_STATUS_10,
+                            REGEX_STATUS_8,
+                            REGEX_STATUS_6,
+                            REGEX_STATUS_7,
+                            REGEX_STATUS_3,
+                            REGEX_STATUS_ERROR_9,
+                            REGEX_STATUS_ERROR_10
                     );
                     break;
 
-                case 8:
+                case REGEX_STATUS_8:
                     status = updateStatus(
                             regex.charAt(i),
-                            4,
-                            5,
-                            9,
-                            10,
-                            8,
-                            6,
-                            7,
-                            3,
-                            -9,
-                            -10
+                            REGEX_STATUS_4,
+                            REGEX_STATUS_5,
+                            REGEX_STATUS_9,
+                            REGEX_STATUS_10,
+                            REGEX_STATUS_8,
+                            REGEX_STATUS_6,
+                            REGEX_STATUS_7,
+                            REGEX_STATUS_3,
+                            REGEX_STATUS_ERROR_9,
+                            REGEX_STATUS_ERROR_10
                     );
                     break;
 
-                case 9:
+                case REGEX_STATUS_9:
                     status = updateStatus(
                             regex.charAt(i),
-                            4,
-                            5,
-                            -8,
-                            -8,
-                            8,
-                            6,
-                            7,
-                            3,
-                            -9,
-                            -10
+                            REGEX_STATUS_4,
+                            REGEX_STATUS_5,
+                            REGEX_STATUS_ERROR_8,
+                            REGEX_STATUS_ERROR_8,
+                            REGEX_STATUS_8,
+                            REGEX_STATUS_6,
+                            REGEX_STATUS_7,
+                            REGEX_STATUS_3,
+                            REGEX_STATUS_ERROR_9,
+                            REGEX_STATUS_ERROR_10
                     );
                     break;
 
-                case 10:
+                case REGEX_STATUS_10:
                     status = updateStatus(
                             regex.charAt(i),
-                            4,
-                            5,
-                            -8,
-                            -8,
-                            8,
-                            6,
-                            7,
-                            3,
-                            -9,
-                            -10
+                            REGEX_STATUS_4,
+                            REGEX_STATUS_5,
+                            REGEX_STATUS_ERROR_8,
+                            REGEX_STATUS_ERROR_8,
+                            REGEX_STATUS_8,
+                            REGEX_STATUS_6,
+                            REGEX_STATUS_7,
+                            REGEX_STATUS_3,
+                            REGEX_STATUS_ERROR_9,
+                            REGEX_STATUS_ERROR_10
                     );
                     break;
 
@@ -318,51 +335,51 @@ public class RegexParser implements RegexConstant {
 
             //System.out.println(i + " " + regex.charAt(i) + " " + status);
             switch (status) {
-                case 0:
+                case REGEX_STATUS_0:
                     return new int[]{status, i};
 
-                case 1:
+                case REGEX_STATUS_1:
                     break;
 
-                case 2:
+                case REGEX_STATUS_2:
                     break;
 
-                case 3:
+                case REGEX_STATUS_3:
                     break;
 
-                case 4:
+                case REGEX_STATUS_4:
                     item = new RegexUnion(++regexCodes[0], father);
                     break;
 
-                case 5:
+                case REGEX_STATUS_5:
                     item = new RegexConcat(++regexCodes[0], father);
                     break;
 
-                case 6:
+                case REGEX_STATUS_6:
                     item = new RegexParenthesis(++regexCodes[0], father);
                     result = parseRegexItem(regex, item, i + 1, status);
                     status = result[0];
                     i = result[1];
                     break;
 
-                case 7:
+                case REGEX_STATUS_7:
                     if (!"Root".equals(father.getType()))
                         return new int[]{status, i};
                     else
-                        return new int[]{-12, i};
+                        return new int[]{REGEX_STATUS_ERROR_12, i};
 
-                case 8:
+                case REGEX_STATUS_8:
                     item = new RegexSymbol(++regexCodes[0], father);
                     item.setValue(regex.substring(i, i + 1));
                     break;
 
-                case 9:
+                case REGEX_STATUS_9:
                     if (item != null)
                         item.setKleeneType(2);
                     item = null;
                     break;
 
-                case 10:
+                case REGEX_STATUS_10:
                     if (item != null)
                         item.setKleeneType(1);
                     item = null;
@@ -384,8 +401,8 @@ public class RegexParser implements RegexConstant {
                 }
                 return new int[]{status, regex.length() - 1};
             } else
-                return new int[]{-13, regex.length() - 1};
+                return new int[]{REGEX_STATUS_ERROR_13, regex.length() - 1};
         } else
-            return new int[]{-11, 0};
+            return new int[]{REGEX_STATUS_ERROR_11, 0};
     }
 }
