@@ -160,6 +160,9 @@ public class MainFrame extends javax.swing.JFrame implements RegexConstant {
         jLabelRegex.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelRegex.setText("Escriba una expresión regular");
 
+        jTextRegex.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextRegex.addActionListener(this::jTextRegexActionPerformed);
+
         jButtonValidateRegex.setText("Validar");
         jButtonValidateRegex.addActionListener(this::jButtonValidateRegexActionPerformed);
 
@@ -206,18 +209,18 @@ public class MainFrame extends javax.swing.JFrame implements RegexConstant {
                 layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(jLabelRegex, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createSequentialGroup()
-                                .addGap(205, 205, 205)
+                                .addGap(260, 260, 260)
                                 .addComponent(jButtonValidateRegex)
                                 .addGap(0, 0, Short.MAX_VALUE))
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addContainerGap(28, Short.MAX_VALUE)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                                .addComponent(jTextRegex, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(90, 90, 90))
+                                                .addComponent(jTextRegex, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(100, 100, 100))
                                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                                .addComponent(jScrollPaneRegexResult, javax.swing.GroupLayout.PREFERRED_SIZE, 424, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(28, 28, 28))))
+                                                .addComponent(jScrollPaneRegexResult, javax.swing.GroupLayout.PREFERRED_SIZE, 546, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(26, 26, 26))))
         );
         layout.setVerticalGroup(
                 layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -229,8 +232,8 @@ public class MainFrame extends javax.swing.JFrame implements RegexConstant {
                                 .addGap(18, 18, 18)
                                 .addComponent(jButtonValidateRegex)
                                 .addGap(32, 32, 32)
-                                .addComponent(jScrollPaneRegexResult, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap(20, Short.MAX_VALUE))
+                                .addComponent(jScrollPaneRegexResult, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(30, Short.MAX_VALUE))
         );
 
         pack();
@@ -321,6 +324,14 @@ public class MainFrame extends javax.swing.JFrame implements RegexConstant {
     private void jMenuItemCleanLogActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemCleanLogActionPerformed
         jTextRegexResult.setText("");
     }//GEN-LAST:event_jMenuItemCleanLogActionPerformed
+    
+    /**
+     * TODO: Definición de {@code jTextRegexActionPerformed}.
+     *
+     * @param evt
+     */
+    private void jTextRegexActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:jTextRegexActionPerformed
+    }//GEN-LAST:jTextRegexActionPerformed
 
     /**
      * Entrada principal del sistema.
