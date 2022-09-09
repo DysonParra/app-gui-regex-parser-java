@@ -19,6 +19,7 @@ import com.project.dev.regexoperation.RegexOperator;
 import com.project.dev.regexoperation.RegexParser;
 import com.project.dev.thompson.construction.ThompsonConstruction;
 import com.project.dev.thompson.operation.ThompsonOperator;
+import java.util.List;
 import javax.swing.JOptionPane;
 
 /**
@@ -255,7 +256,7 @@ public class MainFrame extends javax.swing.JFrame implements RegexConstant {
 
         if (!"".equals(regexText)) {
             Object result = RegexParser.parseString(regexText);
-            int[] error;
+            List<int[]> errors;
 
             try {
                 regex = (RegexItem) result;
@@ -263,8 +264,8 @@ public class MainFrame extends javax.swing.JFrame implements RegexConstant {
                 jMenuItemGenerateAutomat.setEnabled(true);
                 //RegexPrinter.printRegexDebug(regex);
             } catch (Exception e) {
-                error = (int[]) result;
-                printLog(error[0], error[1]);
+                errors = (List<int[]>) result;
+                errors.forEach(error -> printLog(error[0], error[1]));
                 jMenuItemGenerateAutomat.setEnabled(false);
             }
         }

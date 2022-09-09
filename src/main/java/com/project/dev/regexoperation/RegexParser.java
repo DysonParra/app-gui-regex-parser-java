@@ -18,6 +18,8 @@ import com.project.dev.regexitem.RegexParenthesis;
 import com.project.dev.regexitem.RegexRoot;
 import com.project.dev.regexitem.RegexSymbol;
 import com.project.dev.regexitem.RegexUnion;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * TODO: Definición de {@code RegexParser}.
@@ -41,7 +43,9 @@ public class RegexParser implements RegexConstant {
         RegexItem root = new RegexRoot();                                                   // Crea la raiz de los RegexItem.
         root.setValue(regex);                                                               // Asigna valor a root.
         regexCodes[0] = 0;
-        int[] result = new RegexParser().parseRegexItem(regex, root, 0, REGEX_STATUS_START);    // Intenta convertir el String en RegexItem.
+        List<int[]> errors = new ArrayList<>();
+        // Intenta convertir el String en RegexItem.
+        new RegexParser().parseRegexItem(regex, root, 0, REGEX_STATUS_START, errors);
 
         //System.out.println("Final :" + result[0] + " " + result[1]);
         /*
@@ -49,26 +53,12 @@ public class RegexParser implements RegexConstant {
          * root.printRegexItem(root.findMaxLevel(root.getLevel())); System.out.println("");
          * RegexPrinter.printRegex(root); System.out.println("");
          */
-        switch(result[0]) {
-            case REGEX_STATUS_ERROR_FIRST_CHAR_INVALID:
-            case REGEX_STATUS_ERROR_NEXT_CHAR_AFTER_EMPTY_SEQUENCE_NOT_END_SEQUENCE:
-            case REGEX_STATUS_ERROR_NEXT_CHAR_AFTER_NULL_SEQUENCE_NOT_END_SEQUENCE:
-            case REGEX_STATUS_ERROR_CHAR_AFTER_END_SEQUENCE:
-            case REGEX_STATUS_ERROR_INVALID_CHAR_AFTER_UNION:
-            case REGEX_STATUS_ERROR_INVALID_CHAR_AFTER_CONCAT:
-            case REGEX_STATUS_ERROR_INVALID_CHAR_AFTER_OPEN_PARENTHESIS:
-            case REGEX_STATUS_ERROR_KLEENE_CHAR_AFTER_OTHER_KLEENE_CHAR:
-            case REGEX_STATUS_ERROR_NULL_SEQUENCE_IN_POS_DIFF_AS_FIRST:
-            case REGEX_STATUS_ERROR_EMPTY_SEQUENCE_IN_POS_DIFF_AS_FIRST:
-            case REGEX_STATUS_ERROR_MORE_OPEN_THAT_CLOSE_PARENTHESIS:
-            case REGEX_STATUS_ERROR_MORE_CLOSE_THAT_OPEN_PARENTHESIS:
-            case REGEX_STATUS_ERROR_LAST_CHAR_IS_NOT_END_SEQUENCE:
-                // Devuelve el código de error y el número de caracter que lo generó.
-                return result;
-
-            default:
-                // Devuelve la raiz de la expresion.
-                return root;
+        if(!errors.isEmpty()) {
+            // Devuelve los errores.
+            return errors;
+        } else {
+            // Devuelve la raiz de la expresion.
+            return root;
         }
     }
 
@@ -145,13 +135,15 @@ public class RegexParser implements RegexConstant {
      * @param father es el RegexItem al que se le agregaran nuevos RegexItem como hijos.
      * @param index  es la posicion actual en el String regex.
      * @param status es el estado actual del array.
+     * @param errors es donde se almacenarán los errores que se encuentren en la regex.
      * @return el codigo de error o aceptacion y la posicion del ultimo caracter leido.
      */
-    public int[] parseRegexItem(String regex, RegexItem father, int index, int status) {
+    public int[] parseRegexItem(String regex, RegexItem father, int index, int status, List<int[]> errors) {
         RegexItem item = null;                                                  // Indica la posicion de los RegexItem que se vayan creando.
         int[] result;                                                           // Indica el resultado luego de cada ejecucion recursiva.
-
+        int prevStatus;
         for (int i = index; i < regex.length(); i++) {
+            prevStatus = status;
             switch (status) {
                 case REGEX_STATUS_START:
                     status = updateStatus(
@@ -357,7 +349,7 @@ public class RegexParser implements RegexConstant {
 
                 case REGEX_STATUS_OPEN_PARENTHESIS_READED:
                     item = new RegexParenthesis(++regexCodes[0], father);
-                    result = parseRegexItem(regex, item, i + 1, status);
+                    result = parseRegexItem(regex, item, i + 1, status, errors);
                     status = result[0];
                     i = result[1];
                     break;
@@ -365,8 +357,11 @@ public class RegexParser implements RegexConstant {
                 case REGEX_STATUS_CLOSE_PARENTHESIS_READED:
                     if (!"Root".equals(father.getType()))
                         return new int[]{status, i};
-                    else
-                        return new int[]{REGEX_STATUS_ERROR_MORE_CLOSE_THAT_OPEN_PARENTHESIS, i};
+                    else {
+                        errors.add(new int[]{REGEX_STATUS_ERROR_MORE_CLOSE_THAT_OPEN_PARENTHESIS, i}); 
+                        status = prevStatus;
+                        break;
+                    }
 
                 case REGEX_STATUS_SYMBOL_READED:
                     item = new RegexSymbol(++regexCodes[0], father);
@@ -386,23 +381,33 @@ public class RegexParser implements RegexConstant {
                     break;
 
                 default:
-                    return new int[]{status, i};
+                    errors.add(new int[]{status, i}); 
+                    status = prevStatus;
+                    break;
             }
         }
+        int[] lastResult;
 
         if ("Root".equals(father.getType())) {
-            if (regex.charAt(regex.length() - 1) == '\\') {
-                switch (regex.charAt(regex.length() - 2)) {
-                    case '@':
-                    case '$':
-                        item = new RegexSymbol(++regexCodes[0], father);
-                        item.setValue(String.valueOf(regex.charAt(regex.length() - 2)));
-                        break;
-                }
-                return new int[]{status, regex.length() - 1};
-            } else
-                return new int[]{REGEX_STATUS_ERROR_LAST_CHAR_IS_NOT_END_SEQUENCE, regex.length() - 1};
-        } else
-            return new int[]{REGEX_STATUS_ERROR_MORE_OPEN_THAT_CLOSE_PARENTHESIS, 0};
+            switch (regex.charAt(regex.length() - 2)) {
+                case '@':
+                case '$':
+                    item = new RegexSymbol(++regexCodes[0], father);
+                    item.setValue(String.valueOf(regex.charAt(regex.length() - 2)));
+                    break;
+            }
+            lastResult = new int[]{status, regex.length() - 1};
+        } else {
+            errors.add(new int[]{REGEX_STATUS_ERROR_MORE_OPEN_THAT_CLOSE_PARENTHESIS, regex.length() - 1});
+            if (regex.charAt(regex.length() - 1) != '\\')
+                errors.add(new int[]{REGEX_STATUS_ERROR_LAST_CHAR_IS_NOT_END_SEQUENCE, regex.length() - 1});
+            lastResult = new int[]{REGEX_STATUS_ERROR_MORE_OPEN_THAT_CLOSE_PARENTHESIS, 0};
+        }
+
+        if ("Root".equals(father.getType()) && regex.charAt(regex.length() - 1) != '\\') {
+            errors.add(new int[]{REGEX_STATUS_ERROR_LAST_CHAR_IS_NOT_END_SEQUENCE, regex.length() - 1});
+            lastResult = new int[]{REGEX_STATUS_ERROR_LAST_CHAR_IS_NOT_END_SEQUENCE, regex.length() - 1};
+        }
+        return lastResult;
     }
 }
