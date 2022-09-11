@@ -389,17 +389,18 @@ public class RegexParser implements RegexConstant {
         int[] lastResult;
 
         if ("Root".equals(father.getType())) {
-            switch (regex.charAt(regex.length() - 2)) {
-                case '@':
-                case '$':
-                    item = new RegexSymbol(++regexCodes[0], father);
-                    item.setValue(String.valueOf(regex.charAt(regex.length() - 2)));
-                    break;
-            }
+            if(regex.length() == 2)
+                switch (regex.charAt(regex.length() - 2)) {
+                    case '@':
+                    case '$':
+                        item = new RegexSymbol(++regexCodes[0], father);
+                        item.setValue(String.valueOf(regex.charAt(regex.length() - 2)));
+                        break;
+                }
             lastResult = new int[]{status, regex.length() - 1};
         } else {
             errors.add(new int[]{REGEX_STATUS_ERROR_MORE_OPEN_THAT_CLOSE_PARENTHESIS, regex.length() - 1});
-            if (regex.charAt(regex.length() - 1) != '\\')
+            if (regex.length() != 1 && regex.charAt(regex.length() - 1) != '\\')
                 errors.add(new int[]{REGEX_STATUS_ERROR_LAST_CHAR_IS_NOT_END_SEQUENCE, regex.length() - 1});
             lastResult = new int[]{REGEX_STATUS_ERROR_MORE_OPEN_THAT_CLOSE_PARENTHESIS, 0};
         }
