@@ -14,7 +14,6 @@ package com.project.dev.frame;
 import com.project.dev.automat.Automat;
 import com.project.dev.automat.operation.AutomatOperator;
 import javax.swing.JOptionPane;
-import lombok.Data;
 
 /**
  * TODO: Definición de {@code AutomatFrame}.
