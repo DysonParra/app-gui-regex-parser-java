@@ -358,7 +358,7 @@ public class RegexParser implements RegexConstant {
                     if (!"Root".equals(father.getType()))
                         return new int[]{status, i};
                     else {
-                        errors.add(new int[]{REGEX_STATUS_ERROR_MORE_CLOSE_THAT_OPEN_PARENTHESIS, i}); 
+                        errors.add(new int[]{REGEX_STATUS_ERROR_MORE_CLOSE_THAT_OPEN_PARENTHESIS, i});
                         status = prevStatus;
                         break;
                     }
@@ -381,7 +381,7 @@ public class RegexParser implements RegexConstant {
                     break;
 
                 default:
-                    errors.add(new int[]{status, i}); 
+                    errors.add(new int[]{status, i});
                     status = prevStatus;
                     break;
             }

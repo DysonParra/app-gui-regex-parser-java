@@ -324,7 +324,7 @@ public class MainFrame extends javax.swing.JFrame implements RegexConstant {
     private void jMenuItemCleanLogActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemCleanLogActionPerformed
         jTextRegexResult.setText("");
     }//GEN-LAST:event_jMenuItemCleanLogActionPerformed
-    
+
     /**
      * TODO: Definición de {@code jTextRegexActionPerformed}.
      *
