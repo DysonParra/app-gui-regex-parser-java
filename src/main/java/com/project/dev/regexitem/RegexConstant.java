@@ -12,7 +12,7 @@
 package com.project.dev.regexitem;
 
 /**
- * TODO: Definición de {@code RegexItem}.
+ * TODO: Definición de {@code RegexConstant}.
  *
  * @author Dyson Parra
  * @since 1.8
