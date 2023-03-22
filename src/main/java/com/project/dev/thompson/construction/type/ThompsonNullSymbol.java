@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {ThompsonNullSymbol} se encarga de realizar tareas específicas.
+ * @fileoverview    {ThompsonNullSymbol}
  *
  * @version         2.0
  *

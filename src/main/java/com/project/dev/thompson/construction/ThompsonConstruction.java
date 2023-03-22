@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {ThompsonConstruction} se encarga de realizar tareas específicas.
+ * @fileoverview    {ThompsonConstruction}
  *
  * @version         2.0
  *

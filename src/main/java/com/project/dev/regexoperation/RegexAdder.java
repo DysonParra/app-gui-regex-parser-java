@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {RegexAdder} se encarga de realizar tareas específicas.
+ * @fileoverview    {RegexAdder}
  *
  * @version         2.0
  *

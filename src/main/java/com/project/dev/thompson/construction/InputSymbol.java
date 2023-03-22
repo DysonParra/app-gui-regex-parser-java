@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {InputSymbol} se encarga de realizar tareas específicas.
+ * @fileoverview    {InputSymbol}
  *
  * @version         2.0
  *

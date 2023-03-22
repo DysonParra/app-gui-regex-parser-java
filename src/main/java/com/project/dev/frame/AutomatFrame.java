@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {AutomatFrame} se encarga de realizar tareas específicas.
+ * @fileoverview    {AutomatFrame}
  *
  * @version         2.0
  *

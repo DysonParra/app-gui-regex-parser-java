@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {ThompsonKleene} se encarga de realizar tareas específicas.
+ * @fileoverview    {ThompsonKleene}
  *
  * @version         2.0
  *

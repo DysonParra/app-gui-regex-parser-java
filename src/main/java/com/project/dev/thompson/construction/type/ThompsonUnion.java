@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {ThompsonUnion} se encarga de realizar tareas específicas.
+ * @fileoverview    {ThompsonUnion}
  *
  * @version         2.0
  *

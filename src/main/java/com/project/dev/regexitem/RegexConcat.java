@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {RegexConcat} se encarga de realizar tareas específicas.
+ * @fileoverview    {RegexConcat}
  *
  * @version         2.0
  *

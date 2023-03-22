@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {CellModel} se encarga de realizar tareas específicas.
+ * @fileoverview    {CellModel}
  *
  * @version         2.0
  *

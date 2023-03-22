@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {ThompsonPrinter} se encarga de realizar tareas específicas.
+ * @fileoverview    {ThompsonPrinter}
  *
  * @version         2.0
  *

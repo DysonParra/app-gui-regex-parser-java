@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {ThompsonConcat} se encarga de realizar tareas específicas.
+ * @fileoverview    {ThompsonConcat}
  *
  * @version         2.0
  *

@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {RegexPrinter} se encarga de realizar tareas específicas.
+ * @fileoverview    {RegexPrinter}
  *
  * @version         2.0
  *

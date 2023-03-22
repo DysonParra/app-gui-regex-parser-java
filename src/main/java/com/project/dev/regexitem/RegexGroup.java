@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {RegexGroup} se encarga de realizar tareas específicas.
+ * @fileoverview    {RegexGroup}
  *
  * @version         2.0
  *

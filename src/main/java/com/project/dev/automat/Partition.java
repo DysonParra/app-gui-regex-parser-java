@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {Partition} se encarga de realizar tareas específicas.
+ * @fileoverview    {Partition}
  *
  * @version         2.0
  *

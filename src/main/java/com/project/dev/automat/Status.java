@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {Status} se encarga de realizar tareas específicas.
+ * @fileoverview    {Status}
  *
  * @version         2.0
  *

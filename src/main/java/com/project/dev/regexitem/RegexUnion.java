@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {RegexUnion} se encarga de realizar tareas específicas.
+ * @fileoverview    {RegexUnion}
  *
  * @version         2.0
  *

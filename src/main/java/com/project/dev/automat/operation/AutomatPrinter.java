@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {AutomatPrinter} se encarga de realizar tareas específicas.
+ * @fileoverview    {AutomatPrinter}
  *
  * @version         2.0
  *

@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {Transition} se encarga de realizar tareas específicas.
+ * @fileoverview    {Transition}
  *
  * @version         2.0
  *

@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {RegexParser} se encarga de realizar tareas específicas.
+ * @fileoverview    {RegexParser}
  *
  * @version         2.0
  *

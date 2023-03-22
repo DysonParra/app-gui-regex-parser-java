@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {AutomatOperator} se encarga de realizar tareas específicas.
+ * @fileoverview    {AutomatOperator}
  *
  * @version         2.0
  *

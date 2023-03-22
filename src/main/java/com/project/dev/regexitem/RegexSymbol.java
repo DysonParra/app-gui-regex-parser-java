@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {RegexSymbol} se encarga de realizar tareas específicas.
+ * @fileoverview    {RegexSymbol}
  *
  * @version         2.0
  *
