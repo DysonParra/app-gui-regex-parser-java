@@ -25,7 +25,7 @@ import lombok.NoArgsConstructor;
 import lombok.NonNull;
 
 /**
- * TODO: Definición de {@code Transition}.
+ * TODO: Description of {@code Transition}.
  *
  * @author Dyson Parra
  * @since 11
@@ -46,7 +46,7 @@ public class Transition {
     private Map<State, String> endStates = new HashMap<>();     // Estados de fin de la trancision actual.
 
     /**
-     * TODO: Definición de {@code addStartState}.
+     * TODO: Description of {@code addStartState}.
      *
      * @param state
      */
@@ -55,7 +55,7 @@ public class Transition {
     }
 
     /**
-     * TODO: Definición de {@code addStartState}.
+     * TODO: Description of {@code addStartState}.
      *
      * @param states
      */
@@ -66,7 +66,7 @@ public class Transition {
     }
 
     /**
-     * TODO: Definición de {@code addEndState}.
+     * TODO: Description of {@code addEndState}.
      *
      * @param state
      */
@@ -75,7 +75,7 @@ public class Transition {
     }
 
     /**
-     * TODO: Definición de {@code addEndState}.
+     * TODO: Description of {@code addEndState}.
      *
      * @param states
      */
@@ -86,7 +86,7 @@ public class Transition {
     }
 
     /**
-     * TODO: Definición de {@code getStartStatesString}.
+     * TODO: Description of {@code getStartStatesString}.
      *
      * @return
      */
@@ -107,7 +107,7 @@ public class Transition {
     }
 
     /**
-     * TODO: Definición de {@code getEndStatesString}.
+     * TODO: Description of {@code getEndStatesString}.
      *
      * @return
      */

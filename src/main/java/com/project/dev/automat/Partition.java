@@ -22,7 +22,7 @@ import lombok.NoArgsConstructor;
 import lombok.NonNull;
 
 /**
- * TODO: Definición de {@code Partition}.
+ * TODO: Description of {@code Partition}.
  *
  * @author Dyson Parra
  * @since 11
@@ -46,7 +46,7 @@ public class Partition {
     private ArrayList<Status> statuses = new ArrayList<>();
 
     /**
-     * TODO: Definición de {@code add}.
+     * TODO: Description of {@code add}.
      *
      * @param state
      * @return
@@ -56,7 +56,7 @@ public class Partition {
     }
 
     /**
-     * TODO: Definición de {@code contains}.
+     * TODO: Description of {@code contains}.
      *
      * @param state
      * @return
@@ -66,7 +66,7 @@ public class Partition {
     }
 
     /**
-     * TODO: Definición de {@code remove}.
+     * TODO: Description of {@code remove}.
      *
      * @param state
      * @return
@@ -76,7 +76,7 @@ public class Partition {
     }
 
     /**
-     * TODO: Definición de {@code size}.
+     * TODO: Description of {@code size}.
      *
      * @return
      */
@@ -85,7 +85,7 @@ public class Partition {
     }
 
     /**
-     * TODO: Definición de {@code print}.
+     * TODO: Description of {@code print}.
      *
      * @param spaces
      */

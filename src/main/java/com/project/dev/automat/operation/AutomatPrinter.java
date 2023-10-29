@@ -21,7 +21,7 @@ import java.util.Iterator;
 import java.util.Map;
 
 /**
- * TODO: Definición de {@code AutomatPrinter}.
+ * TODO: Description of {@code AutomatPrinter}.
  *
  * @author Dyson Parra
  * @since 11
@@ -29,7 +29,7 @@ import java.util.Map;
 public class AutomatPrinter {
 
     /**
-     * FIXME: Definición de {@code printInputSymbols}. Imprime los simbolos de entrada de un
+     * FIXME: Description of {@code printInputSymbols}. Imprime los simbolos de entrada de un
      * automata finito
      *
      * @param inputSymbols son los simbolos de entrada del automata finito.
@@ -45,7 +45,7 @@ public class AutomatPrinter {
     }
 
     /**
-     * FIXME: Definición de {@code printStatus}. Imprime un estado de un automata finito.
+     * FIXME: Description of {@code printStatus}. Imprime un estado de un automata finito.
      *
      * @param status es el estado.
      */
@@ -67,7 +67,7 @@ public class AutomatPrinter {
     }
 
     /**
-     * FIXME: Definición de {@code printStatuses}. Imprime los estados de un automata finito.
+     * FIXME: Description of {@code printStatuses}. Imprime los estados de un automata finito.
      *
      * @param allStatuses es el array con todos los estados del automata finito.
      */
@@ -84,7 +84,7 @@ public class AutomatPrinter {
     }
 
     /**
-     * FIXME: Definición de {@code printAutomat}. Imprime un automata finito.
+     * FIXME: Description of {@code printAutomat}. Imprime un automata finito.
      *
      * @param automat es el automata finito.
      */
@@ -95,7 +95,7 @@ public class AutomatPrinter {
     }
 
     /**
-     * FIXME: Definición de {@code printMatrix}. Imprime una matriz asociada a un automata finito.
+     * FIXME: Description of {@code printMatrix}. Imprime una matriz asociada a un automata finito.
      *
      * @param matrix es la matriz del automata finito.
      */

@@ -19,7 +19,7 @@ import com.project.dev.automat.operation.AutomatOperator;
 import javax.swing.JOptionPane;
 
 /**
- * TODO: Definición de {@code AutomatFrame}.
+ * TODO: Description of {@code AutomatFrame}.
  *
  * @author Dyson Parra
  * @since 11
@@ -33,7 +33,7 @@ public class AutomatFrame extends javax.swing.JFrame {
     private Automat automat;                                                    // Automata finito asociado a la ventana.
 
     /**
-     * TODO: Definición de {@code getAutomat}.
+     * TODO: Description of {@code getAutomat}.
      *
      * @return
      */
@@ -42,7 +42,7 @@ public class AutomatFrame extends javax.swing.JFrame {
     }
 
     /**
-     * TODO: Definición de {@code setAutomat}.
+     * TODO: Description of {@code setAutomat}.
      *
      * @param automat
      */
@@ -51,7 +51,7 @@ public class AutomatFrame extends javax.swing.JFrame {
     }
 
     /**
-     * TODO: Definición de {@code AutomatFrame}.
+     * TODO: Description of {@code AutomatFrame}.
      *
      */
     public AutomatFrame() {
@@ -126,7 +126,7 @@ public class AutomatFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     /**
-     * TODO: Definición de {@code jMenuItemRecognizeActionPerformed}.
+     * TODO: Description of {@code jMenuItemRecognizeActionPerformed}.
      *
      * @param evt
      */
@@ -153,7 +153,7 @@ public class AutomatFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItemRecognizeActionPerformed
 
     /**
-     * TODO: Definición de {@code jMenuItemEndSequenceActionPerformed}.
+     * TODO: Description of {@code jMenuItemEndSequenceActionPerformed}.
      *
      * @param evt
      */
@@ -173,7 +173,7 @@ public class AutomatFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItemEndSequenceActionPerformed
 
     /**
-     * TODO: Definición de {@code jMenuItemNullSequenceActionPerformed}.
+     * TODO: Description of {@code jMenuItemNullSequenceActionPerformed}.
      *
      * @param evt
      */
@@ -195,7 +195,7 @@ public class AutomatFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItemNullSequenceActionPerformed
 
     /**
-     * TODO: Definición de {@code jMenuItemViewCharacterActionPerformed}.
+     * TODO: Description of {@code jMenuItemViewCharacterActionPerformed}.
      *
      * @param evt
      */

@@ -22,7 +22,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 /**
- * TODO: Definición de {@code RegexItem}.
+ * TODO: Description of {@code RegexItem}.
  *
  * @author Dyson Parra
  * @since 11
@@ -61,7 +61,7 @@ public abstract class RegexItem {
     }
 
     /**
-     * FIXME: Definición de {@code getRoot}. Obtiene la raiz desde el RegexItem actual.
+     * FIXME: Description of {@code getRoot}. Obtiene la raiz desde el RegexItem actual.
      *
      * @return la raiz del regexItem actual.
      */
@@ -73,7 +73,7 @@ public abstract class RegexItem {
     }
 
     /**
-     * FIXME: Definición de {@code findMaxLevel}. Obtiene la mayor profundidad de un RegexItem.
+     * FIXME: Description of {@code findMaxLevel}. Obtiene la mayor profundidad de un RegexItem.
      *
      * @param level Es el nivel del regexItem actual.
      * @return El maximo nivel dentro de una expresion regular.
@@ -97,7 +97,7 @@ public abstract class RegexItem {
     }
 
     /**
-     * FIXME: Definición de {@code printThompsonConstruction}. Imprime la construccion de Thompson
+     * FIXME: Description of {@code printThompsonConstruction}. Imprime la construccion de Thompson
      * equivalente al RegexItem actual.
      */
     public void printThompsonConstruction() {
@@ -112,7 +112,7 @@ public abstract class RegexItem {
     }
 
     /**
-     * FIXME: Definición de {@code getValueToprint}. Almacena un string precedido y antecedido de
+     * FIXME: Description of {@code getValueToprint}. Almacena un string precedido y antecedido de
      * una cantidad de espacios dependiendo del nivel del RegexItem.
      *
      * @param value     es el eString a imprimir.
@@ -140,14 +140,14 @@ public abstract class RegexItem {
     }
 
     /**
-     * TODO: Definición de {@code printDebugRegexItem}.
+     * TODO: Description of {@code printDebugRegexItem}.
      *
      * @param maxLevel
      */
     public abstract void printDebugRegexItem(int maxLevel);
 
     /**
-     * TODO: Definición de {@code printThompsonRegexItem}.
+     * TODO: Description of {@code printThompsonRegexItem}.
      *
      * @param maxLevel
      * @param isOpen

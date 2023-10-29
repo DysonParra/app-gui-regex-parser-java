@@ -23,7 +23,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * TODO: Definición de {@code Automat}.
+ * TODO: Description of {@code Automat}.
  *
  * @author Dyson Parra
  * @since 11
@@ -48,7 +48,7 @@ public class Automat {
     private String nullSequence;
 
     /**
-     * TODO: Definición de {@code getEndSequenceChar}.
+     * TODO: Description of {@code getEndSequenceChar}.
      *
      * @return
      */
@@ -57,7 +57,7 @@ public class Automat {
     }
 
     /**
-     * TODO: Definición de {@code getNullSequenceChar}.
+     * TODO: Description of {@code getNullSequenceChar}.
      *
      * @return
      */

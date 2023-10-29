@@ -26,7 +26,7 @@ import com.project.dev.thompson.construction.type.ThompsonSymbol;
 import com.project.dev.thompson.construction.type.ThompsonUnion;
 
 /**
- * TODO: Definición de {@code RegexAdder}.
+ * TODO: Description of {@code RegexAdder}.
  *
  * @author Dyson Parra
  * @since 11
@@ -37,7 +37,7 @@ public class RegexAdder {
     private static int[] codes = {0, 0};                                         // 0 = state, 1 = symbol.
 
     /**
-     * FIXME: Definición de {@code addRegexUnionGroups}. Agrega grupos a las uniones de una
+     * FIXME: Description of {@code addRegexUnionGroups}. Agrega grupos a las uniones de una
      * expresion regular.
      *
      * @param root es la raiz de la expresion regular.
@@ -113,7 +113,7 @@ public class RegexAdder {
     }
 
     /**
-     * FIXME: Definición de {@code addRegexConcatGroups}. Agrega grupos a las concatenaciones de una
+     * FIXME: Description of {@code addRegexConcatGroups}. Agrega grupos a las concatenaciones de una
      * expresion regular.
      *
      * @param root es la raiz de la expresion regular.
@@ -188,7 +188,7 @@ public class RegexAdder {
     }
 
     /**
-     * FIXME: Definición de {@code updateLevels}. Actualiza los niveles de los RegexItem de una
+     * FIXME: Description of {@code updateLevels}. Actualiza los niveles de los RegexItem de una
      * expresion regular.
      *
      * @param firstChild es el primer hijo de la raiz de la expresion regular.
@@ -207,7 +207,7 @@ public class RegexAdder {
     }
 
     /**
-     * FIXME: Definición de {@code addThompsonConstructions}. Agrega construcciones de Thompson a
+     * FIXME: Description of {@code addThompsonConstructions}. Agrega construcciones de Thompson a
      * los RegexItem de una expresion regular.
      *
      * @param root     es la raiz de la expresion regular.
@@ -323,7 +323,7 @@ public class RegexAdder {
     }
 
     /**
-     * FIXME: Definición de {@code uniteThompsonConstructions}. Une las construcciones de Thompson
+     * FIXME: Description of {@code uniteThompsonConstructions}. Une las construcciones de Thompson
      * de los RegexItem de una expresion regular.
      *
      * @param root     es la raiz de la expresion regular.

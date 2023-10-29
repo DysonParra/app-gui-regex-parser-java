@@ -15,7 +15,7 @@
 package com.project.dev.regexitem;
 
 /**
- * TODO: Definición de {@code RegexConstant}.
+ * TODO: Description of {@code RegexConstant}.
  *
  * @author Dyson Parra
  * @since 11

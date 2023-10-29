@@ -21,7 +21,7 @@ import com.project.dev.thompson.construction.Transition;
 import java.util.Map;
 
 /**
- * TODO: Definición de {@code ThompsonPrinter}.
+ * TODO: Description of {@code ThompsonPrinter}.
  *
  * @author Dyson Parra
  * @since 11
@@ -29,7 +29,7 @@ import java.util.Map;
 public class ThompsonPrinter {
 
     /**
-     * FIXME: Definición de {@code printThompsonConstruction}. Imprime la una construccion de
+     * FIXME: Description of {@code printThompsonConstruction}. Imprime la una construccion de
      * Thompson.
      *
      * @param root               es la construccion de thompson a imprimir.
@@ -42,7 +42,7 @@ public class ThompsonPrinter {
     }
 
     /**
-     * FIXME: Definición de {@code printNextStates}. Imprime desde un estado cada estado a los
+     * FIXME: Description of {@code printNextStates}. Imprime desde un estado cada estado a los
      * cuales es posible llegar
      *
      * @param states es el array con los estados de una construccion de thompson.
@@ -63,7 +63,7 @@ public class ThompsonPrinter {
     }
 
     /**
-     * FIXME: Definición de {@code printTransition}. Imprime una transicion.
+     * FIXME: Description of {@code printTransition}. Imprime una transicion.
      *
      * @param transition es la trancision.
      */
@@ -77,7 +77,7 @@ public class ThompsonPrinter {
     }
 
     /**
-     * FIXME: Definición de {@code printTransitions}. Imprime un array de transiciones.
+     * FIXME: Description of {@code printTransitions}. Imprime un array de transiciones.
      *
      * @param transitions es el array con las trancisiones.
      */
@@ -91,7 +91,7 @@ public class ThompsonPrinter {
     }
 
     /**
-     * FIXME: Definición de {@code printInputSymbols}. Imprime los simbolos de entrada de una
+     * FIXME: Description of {@code printInputSymbols}. Imprime los simbolos de entrada de una
      * construccion de thompson.
      *
      * @param inputSymbols son los simbolos de entrada de la construccion de thompson.

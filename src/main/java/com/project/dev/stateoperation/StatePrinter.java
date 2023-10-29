@@ -19,7 +19,7 @@ import com.project.dev.thompson.construction.State;
 import java.util.Map;
 
 /**
- * TODO: Definición de {@code StatePrinter}.
+ * TODO: Description of {@code StatePrinter}.
  *
  * @author Dyson Parra
  * @since 11
@@ -27,7 +27,7 @@ import java.util.Map;
 public class StatePrinter {
 
     /**
-     * FIXME: Definición de {@code printStates}. Imprime un estado y los estados a los que se puede
+     * FIXME: Description of {@code printStates}. Imprime un estado y los estados a los que se puede
      * llegar desde este con informacion detallada.
      *
      * @param firstState indica el primer estado.
@@ -52,7 +52,7 @@ public class StatePrinter {
     }
 
     /**
-     * FIXME: Definición de {@code printStatesValues}. Imprime un estado y los estados a los que se
+     * FIXME: Description of {@code printStatesValues}. Imprime un estado y los estados a los que se
      * puede llegar desde este.
      *
      * @param firstState indica el primer estado.
@@ -79,7 +79,7 @@ public class StatePrinter {
     }
 
     /**
-     * FIXME: Definición de {@code printClosingLambda}. Imprime todos los cierres lambda de un
+     * FIXME: Description of {@code printClosingLambda}. Imprime todos los cierres lambda de un
      * estado y los estados que le siguen.
      *
      * @param closingLambdas son todos los cierres lambda.

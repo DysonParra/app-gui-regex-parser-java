@@ -20,7 +20,7 @@ import com.project.dev.thompson.construction.State;
 import com.project.dev.thompson.construction.ThompsonConstruction;
 
 /**
- * TODO: Definición de {@code ThompsonSymbol}.
+ * TODO: Description of {@code ThompsonSymbol}.
  *
  * @author Dyson Parra
  * @since 11
@@ -28,7 +28,7 @@ import com.project.dev.thompson.construction.ThompsonConstruction;
 public class ThompsonSymbol extends ThompsonConstruction {
 
     /**
-     * TODO: Definición de {@code ThompsonSymbol}.
+     * TODO: Description of {@code ThompsonSymbol}.
      *
      * @param codes       indica el codigo actual de cada estado y de cada simbolo a crear.
      * @param regexSymbol indica el regexSymbol asociado al simbolo de la construccion de Thompson.

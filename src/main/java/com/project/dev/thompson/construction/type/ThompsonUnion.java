@@ -19,7 +19,7 @@ import com.project.dev.thompson.construction.State;
 import com.project.dev.thompson.construction.ThompsonConstruction;
 
 /**
- * TODO: Definición de {@code ThompsonUnion}.
+ * TODO: Description of {@code ThompsonUnion}.
  *
  * @author Dyson Parra
  * @since 11
@@ -27,7 +27,7 @@ import com.project.dev.thompson.construction.ThompsonConstruction;
 public class ThompsonUnion extends ThompsonConstruction {
 
     /**
-     * TODO: Definición de {@code ThompsonUnion}.
+     * TODO: Description of {@code ThompsonUnion}.
      *
      * @param codes  indica el codigo actual de cada estado y de cada simbolo a crear.
      * @param groupU es un RegexItem de tipo union.

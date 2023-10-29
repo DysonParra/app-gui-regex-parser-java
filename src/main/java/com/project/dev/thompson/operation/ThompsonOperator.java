@@ -27,7 +27,7 @@ import java.util.Iterator;
 import java.util.Map;
 
 /**
- * TODO: Definición de {@code ThompsonOperator}.
+ * TODO: Description of {@code ThompsonOperator}.
  *
  * @author Dyson Parra
  * @since 11
@@ -35,7 +35,7 @@ import java.util.Map;
 public class ThompsonOperator {
 
     /**
-     * FIXME: Definición de {@code makeStatesArray}. Crea un array con cada uno de los estados de la
+     * FIXME: Description of {@code makeStatesArray}. Crea un array con cada uno de los estados de la
      * construccion de thompson.
      *
      * @param thompson es la construccion de thompson a la que se le actualizaran los estados.
@@ -52,7 +52,7 @@ public class ThompsonOperator {
     }
 
     /**
-     * FIXME: Definición de {@code addStatesToArray}. Agrega un estado y todos los que le siguen a
+     * FIXME: Description of {@code addStatesToArray}. Agrega un estado y todos los que le siguen a
      * un array.
      *
      * @param firstState   indica el primer estado.
@@ -83,7 +83,7 @@ public class ThompsonOperator {
     }
 
     /**
-     * FIXME: Definición de {@code updateStatesCodes}. Actualiza los nombres de los estados de una
+     * FIXME: Description of {@code updateStatesCodes}. Actualiza los nombres de los estados de una
      * construccion de thompson
      *
      * @param states es el array con los estados de una construccion de thompson.
@@ -94,7 +94,7 @@ public class ThompsonOperator {
     }
 
     /**
-     * FIXME: Definición de {@code makeStateTransitions}. Obtiene los estados a los que se puede
+     * FIXME: Description of {@code makeStateTransitions}. Obtiene los estados a los que se puede
      * lleger desde un estado inicial usando trancisiones con un simbolo indicado.
      *
      * @param state     indica el estado inicial.
@@ -138,7 +138,7 @@ public class ThompsonOperator {
     }
 
     /**
-     * FIXME: Definición de {@code makeClosingLambda}. Obtiene el ciere lambda de cada estado.
+     * FIXME: Description of {@code makeClosingLambda}. Obtiene el ciere lambda de cada estado.
      *
      * @param states son los estados de una construccion de thompson.
      * @return un array de trancisiones con los cierres lambda.
@@ -162,7 +162,7 @@ public class ThompsonOperator {
     }
 
     /**
-     * FIXME: Definición de {@code getInputSymbols}. Obtiene los simbolos de entrada de una
+     * FIXME: Description of {@code getInputSymbols}. Obtiene los simbolos de entrada de una
      * construccion de thompson.
      *
      * @param states son los estados de una construccion de thompson.
@@ -195,7 +195,7 @@ public class ThompsonOperator {
     }
 
     /**
-     * FIXME: Definición de {@code compareTransitionStates}. Compara si dos maps de estados tienen
+     * FIXME: Description of {@code compareTransitionStates}. Compara si dos maps de estados tienen
      * los mismos estados.
      *
      * @param states1 es el primer map de estados.
@@ -212,7 +212,7 @@ public class ThompsonOperator {
     }
 
     /**
-     * FIXME: Definición de {@code existTransition}. Valida si ya existe una transicion en el
+     * FIXME: Description of {@code existTransition}. Valida si ya existe una transicion en el
      * arrayList de trancisiones con estados iniciales igual a los estados parametro.
      *
      * @param allTransitions contiene todas las trancisiones que hay hasta ahora.
@@ -238,7 +238,7 @@ public class ThompsonOperator {
     }
 
     /**
-     * FIXME: Definición de {@code getFirstTransitions}. Obtiene las transiciones del primer estado
+     * FIXME: Description of {@code getFirstTransitions}. Obtiene las transiciones del primer estado
      * del automata finito a crear.
      *
      * @param closingLambdas son los cierres lambda de la construccion de thompson.
@@ -292,7 +292,7 @@ public class ThompsonOperator {
     }
 
     /**
-     * FIXME: Definición de {@code getTransitions}. Obtiene las transiciones de los estados del
+     * FIXME: Description of {@code getTransitions}. Obtiene las transiciones de los estados del
      * automata finito a crear.
      *
      * @param allTransitions contiene todas las trancisiones que se han agregado hasta ahora.
@@ -374,7 +374,7 @@ public class ThompsonOperator {
     }
 
     /**
-     * FIXME: Definición de {@code makeAutomatStatusesArray}. Obtiene un array con los estados de un
+     * FIXME: Description of {@code makeAutomatStatusesArray}. Obtiene un array con los estados de un
      * automata finito.
      *
      * @param closingLambdas son los cierres lambda una construccion de thompson.
@@ -469,7 +469,7 @@ public class ThompsonOperator {
     }
 
     /**
-     * FIXME: Definición de {@code findPartition}. Obtiene en que particion está un estado.
+     * FIXME: Description of {@code findPartition}. Obtiene en que particion está un estado.
      *
      * @param partitions indica las particiones.
      * @param state      indica el estado que se va abuscar.
@@ -488,7 +488,7 @@ public class ThompsonOperator {
     }
 
     /**
-     * FIXME: Definición de {@code simplifyAutomatStatuses}. Simplifica los estados que va a tener
+     * FIXME: Description of {@code simplifyAutomatStatuses}. Simplifica los estados que va a tener
      * un automata finito.
      *
      * @param statuses     indica los estados del automata.
@@ -650,7 +650,7 @@ public class ThompsonOperator {
     }
 
     /**
-     * FIXME: Definición de {@code makeAutomat}. Obtiene un automata finito en base a una
+     * FIXME: Description of {@code makeAutomat}. Obtiene un automata finito en base a una
      * construccion de thompson.
      *
      * @param thompson     es la construccion de thompson.

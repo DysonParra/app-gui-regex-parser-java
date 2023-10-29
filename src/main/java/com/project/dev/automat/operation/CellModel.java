@@ -21,7 +21,7 @@ import javax.swing.JTable;
 import javax.swing.table.DefaultTableCellRenderer;
 
 /**
- * TODO: Definición de {@code CellModel}.
+ * TODO: Description of {@code CellModel}.
  *
  * @author Dyson Parra
  * @since 11
@@ -29,7 +29,7 @@ import javax.swing.table.DefaultTableCellRenderer;
 public class CellModel extends DefaultTableCellRenderer {
 
     /**
-     * TODO: Definición de {@code setHorizontalAlignment}.
+     * TODO: Description of {@code setHorizontalAlignment}.
      *
      * @param i
      */
@@ -39,7 +39,7 @@ public class CellModel extends DefaultTableCellRenderer {
     }
 
     /**
-     * FIXME: Definición de {@code getTableCellRendererComponent}. Declara un componente con el
+     * FIXME: Description of {@code getTableCellRendererComponent}. Declara un componente con el
      * CellRenderer de la tabla.
      */
     @Override

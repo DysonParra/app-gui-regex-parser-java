@@ -19,7 +19,7 @@ import com.project.dev.thompson.construction.State;
 import com.project.dev.thompson.construction.ThompsonConstruction;
 
 /**
- * TODO: Definición de {@code ThompsonKleenePlus}.
+ * TODO: Description of {@code ThompsonKleenePlus}.
  *
  * @author Dyson Parra
  * @since 11
@@ -27,7 +27,7 @@ import com.project.dev.thompson.construction.ThompsonConstruction;
 public class ThompsonKleenePlus extends ThompsonConstruction {
 
     /**
-     * TODO: Definición de {@code ThompsonKleenePlus}.
+     * TODO: Description of {@code ThompsonKleenePlus}.
      *
      * @param codes       indica el codigo actual de cada estado y de cada simbolo a crear.
      * @param regexSymbol indica el regexSymbol asociado al simbolo de la construccion de Thompson.

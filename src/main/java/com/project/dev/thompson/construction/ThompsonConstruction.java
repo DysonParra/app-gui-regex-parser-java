@@ -19,7 +19,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 /**
- * TODO: Definición de {@code ThompsonConstruction}.
+ * TODO: Description of {@code ThompsonConstruction}.
  *
  * @author Dyson Parra
  * @since 11
@@ -48,7 +48,7 @@ public abstract class ThompsonConstruction {
     }
 
     /**
-     * FIXME: Definición de {@code concat}. Une la construccion de Thompson actual con una
+     * FIXME: Description of {@code concat}. Une la construccion de Thompson actual con una
      * parametro.
      *
      * @param construction es la construccion que se agregara a la actual.
@@ -61,7 +61,7 @@ public abstract class ThompsonConstruction {
     }
 
     /**
-     * FIXME: Definición de {@code print}. Imprime la construccion de Thompson.
+     * FIXME: Description of {@code print}. Imprime la construccion de Thompson.
      *
      * @param printStateQuantity indica si imprime la cantidad de estados.
      */

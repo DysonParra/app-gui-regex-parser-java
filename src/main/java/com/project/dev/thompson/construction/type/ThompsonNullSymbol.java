@@ -20,7 +20,7 @@ import com.project.dev.thompson.construction.State;
 import com.project.dev.thompson.construction.ThompsonConstruction;
 
 /**
- * TODO: Definición de {@code ThompsonNullSymbol}.
+ * TODO: Description of {@code ThompsonNullSymbol}.
  *
  * @author Dyson Parra
  * @since 11
@@ -28,7 +28,7 @@ import com.project.dev.thompson.construction.ThompsonConstruction;
 public class ThompsonNullSymbol extends ThompsonConstruction {
 
     /**
-     * TODO: Definición de {@code ThompsonNullSymbol}.
+     * TODO: Description of {@code ThompsonNullSymbol}.
      *
      * @param codes indica el codigo actual de cada estado y de cada simbolo a crear.
      */

@@ -24,7 +24,7 @@ import lombok.NoArgsConstructor;
 import lombok.NonNull;
 
 /**
- * TODO: Definición de {@code State}.
+ * TODO: Description of {@code State}.
  *
  * @author Dyson Parra
  * @since 11
@@ -44,7 +44,7 @@ public class State {
     private Map<Integer, InputSymbol> nextSymbols = new HashMap<>();    // Hacia cuales estados se puede llegar desde este.
 
     /**
-     * TODO: Definición de {@code addPrevSymbol}.
+     * TODO: Description of {@code addPrevSymbol}.
      *
      * @param code
      * @param symbol
@@ -54,7 +54,7 @@ public class State {
     }
 
     /**
-     * TODO: Definición de {@code addNextSymbol}.
+     * TODO: Description of {@code addNextSymbol}.
      *
      * @param code
      * @param symbol
@@ -64,7 +64,7 @@ public class State {
     }
 
     /**
-     * TODO: Definición de {@code getPrevSymbol}.
+     * TODO: Description of {@code getPrevSymbol}.
      *
      * @param number
      * @return
@@ -74,7 +74,7 @@ public class State {
     }
 
     /**
-     * TODO: Definición de {@code getNextSymbol}.
+     * TODO: Description of {@code getNextSymbol}.
      *
      * @param number
      * @return
@@ -94,7 +94,7 @@ public class State {
     }
 
     /**
-     * FIXME: Definición de {@code merge}. Combinar el estado actual con un estado parametro.
+     * FIXME: Description of {@code merge}. Combinar el estado actual con un estado parametro.
      *
      * @param state es el estado que se combinara con el actual.
      */
@@ -125,7 +125,7 @@ public class State {
     }
 
     /**
-     * FIXME: Definición de {@code printStateDebug}. Imprime el estado cada uno de los simbolos a
+     * FIXME: Description of {@code printStateDebug}. Imprime el estado cada uno de los simbolos a
      * los que lleva con informacion detallada.
      *
      * @param backSymbol indica si se llego al estado actual devolviendose.
@@ -148,7 +148,7 @@ public class State {
     }
 
     /**
-     * FIXME: Definición de {@code printState}. Imprime el estado cada uno de los simbolos a los que
+     * FIXME: Description of {@code printState}. Imprime el estado cada uno de los simbolos a los que
      * lleva.
      *
      * @param backSymbol indica si se llego al estado actual devolviendose.

@@ -18,7 +18,7 @@ import com.project.dev.regexitem.RegexItem;
 import com.project.dev.thompson.construction.ThompsonConstruction;
 
 /**
- * TODO: Definición de {@code ThompsonConcat}.
+ * TODO: Description of {@code ThompsonConcat}.
  *
  * @author Dyson Parra
  * @since 11
@@ -26,7 +26,7 @@ import com.project.dev.thompson.construction.ThompsonConstruction;
 public class ThompsonConcat extends ThompsonConstruction {
 
     /**
-     * TODO: Definición de {@code ThompsonConcat}.
+     * TODO: Description of {@code ThompsonConcat}.
      *
      * @param codes  indica el codigo actual de cada estado y de cada simbolo a crear.
      * @param groupC es un RegexItem de tipo concatenacion.

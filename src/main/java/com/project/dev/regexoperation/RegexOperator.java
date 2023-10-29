@@ -18,7 +18,7 @@ import com.project.dev.regexitem.RegexItem;
 import com.project.dev.thompson.construction.ThompsonConstruction;
 
 /**
- * TODO: Definición de {@code RegexOperator}.
+ * TODO: Description of {@code RegexOperator}.
  *
  * @author Dyson Parra
  * @since 11
@@ -26,7 +26,7 @@ import com.project.dev.thompson.construction.ThompsonConstruction;
 public class RegexOperator {
 
     /**
-     * FIXME: Definición de {@code getThompsonConstruction}. Obtiene la construccion de thompson de
+     * FIXME: Description of {@code getThompsonConstruction}. Obtiene la construccion de thompson de
      * una expresion regular.
      *
      * @param root es la raiz de la expresion regular.

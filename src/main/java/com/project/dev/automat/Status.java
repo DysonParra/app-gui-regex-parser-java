@@ -22,7 +22,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * TODO: Definición de {@code Status}.
+ * TODO: Description of {@code Status}.
  *
  * @author Dyson Parra
  * @since 11
@@ -42,7 +42,7 @@ public class Status {
     private Map<String, Status> nextStatuses = new HashMap<>();
 
     /**
-     * TODO: Definición de {@code addNextStatus}.
+     * TODO: Description of {@code addNextStatus}.
      *
      * @param symbol
      * @param status
@@ -52,7 +52,7 @@ public class Status {
     }
 
     /**
-     * TODO: Definición de {@code addNextStatus}.
+     * TODO: Description of {@code addNextStatus}.
      *
      * @param statuses
      */
@@ -73,7 +73,7 @@ public class Status {
     }
 
     /**
-     * TODO: Definición de {@code getSimpleValue}.
+     * TODO: Description of {@code getSimpleValue}.
      *
      * @return
      */
@@ -82,7 +82,7 @@ public class Status {
     }
 
     /**
-     * TODO: Definición de {@code simplePrint}.
+     * TODO: Description of {@code simplePrint}.
      *
      */
     public void simplePrint() {
@@ -90,7 +90,7 @@ public class Status {
     }
 
     /**
-     * TODO: Definición de {@code print}.
+     * TODO: Description of {@code print}.
      *
      * @param recursive
      * @param spaces

@@ -23,7 +23,7 @@ import lombok.NoArgsConstructor;
 import lombok.NonNull;
 
 /**
- * TODO: Definición de {@code InputSymbol}.
+ * TODO: Description of {@code InputSymbol}.
  *
  * @author Dyson Parra
  * @since 11
@@ -54,7 +54,7 @@ public class InputSymbol {
     }
 
     /**
-     * FIXME: Definición de {@code printSymbolDebug}. Imprime el simbolo y el estado al que lleva
+     * FIXME: Description of {@code printSymbolDebug}. Imprime el simbolo y el estado al que lleva
      * con informacion detallada.
      */
     public void printSymbolDebug() {
@@ -63,7 +63,7 @@ public class InputSymbol {
     }
 
     /**
-     * FIXME: Definición de {@code printSymbol}. Imprime el simbolo y el estado al que leva.
+     * FIXME: Description of {@code printSymbol}. Imprime el simbolo y el estado al que leva.
      */
     public void printSymbol() {
         System.out.printf("[%2s][%s]---> ", code, regexItem.getValue());

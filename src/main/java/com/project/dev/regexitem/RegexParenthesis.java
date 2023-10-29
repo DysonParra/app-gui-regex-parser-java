@@ -18,7 +18,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
 /**
- * TODO: Definición de {@code RegexParenthesis}.
+ * TODO: Description of {@code RegexParenthesis}.
  *
  * @author Dyson Parra
  * @since 11
@@ -26,7 +26,7 @@ import java.io.PrintStream;
 public class RegexParenthesis extends RegexItem {
 
     /**
-     * TODO: Definición de {@code RegexParenthesis}.
+     * TODO: Description of {@code RegexParenthesis}.
      *
      * @param code   indica el codigo del RegexItem.
      * @param father indica el padre del RegexItem.
@@ -57,7 +57,7 @@ public class RegexParenthesis extends RegexItem {
     }
 
     /**
-     * FIXME: Definición de {@code printDebugRegexItem}. Imprime el RegexItem con informacion
+     * FIXME: Description of {@code printDebugRegexItem}. Imprime el RegexItem con informacion
      * detallada.
      *
      * @param maxLevel es el maximo nivel dentro de la expresion regular a la que pertenece el
@@ -97,7 +97,7 @@ public class RegexParenthesis extends RegexItem {
     }
 
     /**
-     * FIXME: Definición de {@code printThompsonRegexItem}. Imprime el valor del RegexItem actual y
+     * FIXME: Description of {@code printThompsonRegexItem}. Imprime el valor del RegexItem actual y
      * la contruccion de Thompson asociada.
      *
      * @param maxLevel    es el maximo nivel dentro de la expresion regular a la que pertenece el

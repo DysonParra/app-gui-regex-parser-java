@@ -17,7 +17,7 @@ package com.project.dev.regexoperation;
 import com.project.dev.regexitem.RegexItem;
 
 /**
- * TODO: Definición de {@code RegexPrinter}.
+ * TODO: Description of {@code RegexPrinter}.
  *
  * @author Dyson Parra
  * @since 11
@@ -25,7 +25,7 @@ import com.project.dev.regexitem.RegexItem;
 public class RegexPrinter {
 
     /**
-     * FIXME: Definición de {@code printRegex}. Imprime los RegexItem de una expresion regular.
+     * FIXME: Description of {@code printRegex}. Imprime los RegexItem de una expresion regular.
      *
      * @param root        es la raiz de la expresion regular.
      * @param printGroups indica s i se imprimiran los grupos.
@@ -125,7 +125,7 @@ public class RegexPrinter {
     }
 
     /**
-     * FIXME: Definición de {@code printRegexDebug}. Imprime los RegexItem de una expresion regular
+     * FIXME: Description of {@code printRegexDebug}. Imprime los RegexItem de una expresion regular
      * con informacion detallada.
      *
      * @param root es la raiz de la expresion regular.
@@ -138,7 +138,7 @@ public class RegexPrinter {
     }
 
     /**
-     * FIXME: Definición de {@code printRegexThompson}. Imprime el valor de los RegexItem de una
+     * FIXME: Description of {@code printRegexThompson}. Imprime el valor de los RegexItem de una
      * expresion regular y su contruccion de Thompson asociada.
      *
      * @param root        es la raiz de la expresion regular.

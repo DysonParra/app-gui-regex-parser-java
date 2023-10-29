@@ -26,7 +26,7 @@ import javax.swing.JTable;
 import static javax.swing.JTable.AUTO_RESIZE_OFF;
 
 /**
- * TODO: Definición de {@code AutomatOperator}.
+ * TODO: Description of {@code AutomatOperator}.
  *
  * @author Dyson Parra
  * @since 11
@@ -34,7 +34,7 @@ import static javax.swing.JTable.AUTO_RESIZE_OFF;
 public class AutomatOperator {
 
     /**
-     * FIXME: Definición de {@code getAutomatMatrix}. Obtiene la matriz del automata finito.
+     * FIXME: Description of {@code getAutomatMatrix}. Obtiene la matriz del automata finito.
      *
      * @param automat es el automata finito.
      * @return una matriz con los estados ysimbolos de entrada del automata finito.
@@ -92,7 +92,7 @@ public class AutomatOperator {
     }
 
     /**
-     * FIXME: Definición de {@code matrixToJTable}. Lleva un matrix parametro a un JTable, y el
+     * FIXME: Description of {@code matrixToJTable}. Lleva un matrix parametro a un JTable, y el
      * JTable a un JScrollPane. Pone las posiciones de la matrix con valor diferente a "" en el
      * Jtable como no editable. Pone las posiciones de la matrix con valor = "" con fondo rojo
      * (estados de error). Además pone las demas posiciones con fondo color Cian. Deja las casillas
@@ -179,7 +179,7 @@ public class AutomatOperator {
     }
 
     /**
-     * FIXME: Definición de {@code addMatrixToJFrame}. Agrega una matrix a un JTable y el JTable a
+     * FIXME: Description of {@code addMatrixToJFrame}. Agrega una matrix a un JTable y el JTable a
      * un JFrame.
      *
      * @param frame  el el JFrame al que se le agregara la matriz.
@@ -231,7 +231,7 @@ public class AutomatOperator {
     }
 
     /**
-     * FIXME: Definición de {@code valiadteString}. Valida si una cadena puede ser reconocida por un
+     * FIXME: Description of {@code valiadteString}. Valida si una cadena puede ser reconocida por un
      * automata finito.
      *
      * @param automat es el automata finito.

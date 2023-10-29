@@ -25,7 +25,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * TODO: Definición de {@code RegexParser}.
+ * TODO: Description of {@code RegexParser}.
  *
  * @author Dyson Parra
  * @since 11
@@ -36,7 +36,7 @@ public class RegexParser implements RegexConstant {
     private static int[] regexCodes = {0};
 
     /**
-     * FIXME: Definición de {@code parseString}. Convierte un String en RegexItem.
+     * FIXME: Description of {@code parseString}. Convierte un String en RegexItem.
      *
      * @param regex es el String a convertir en RegexItem.
      * @return un objeto con la raiz de los RegexItem o un array con el codigo de error y la
@@ -66,7 +66,7 @@ public class RegexParser implements RegexConstant {
     }
 
     /**
-     * FIXME: Definición de {@code updateStatus}. Obtiene el siguiente estado en base al actual.
+     * FIXME: Description of {@code updateStatus}. Obtiene el siguiente estado en base al actual.
      *
      * @param input        es el caracter de entrada.
      * @param union        es el estado que se devuelve si input es una union.
@@ -132,7 +132,7 @@ public class RegexParser implements RegexConstant {
     }
 
     /**
-     * FIXME: Definición de {@code parseRegexItem}. Convierte un String en RegexItem.
+     * FIXME: Description of {@code parseRegexItem}. Convierte un String en RegexItem.
      *
      * @param regex  es el String a convertir en RegexItem.
      * @param father es el RegexItem al que se le agregaran nuevos RegexItem como hijos.

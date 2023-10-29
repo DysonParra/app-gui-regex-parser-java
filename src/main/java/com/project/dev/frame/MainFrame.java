@@ -26,7 +26,7 @@ import java.util.List;
 import javax.swing.JOptionPane;
 
 /**
- * TODO: Definición de {@code MainFrame}.
+ * TODO: Description of {@code MainFrame}.
  *
  * @author Dyson Parra
  * @since 11
@@ -37,7 +37,7 @@ public class MainFrame extends javax.swing.JFrame implements RegexConstant {
     private RegexItem regex;
 
     /**
-     * TODO: Definición de {@code MainFrame}.
+     * TODO: Description of {@code MainFrame}.
      *
      */
     public MainFrame() {
@@ -51,7 +51,7 @@ public class MainFrame extends javax.swing.JFrame implements RegexConstant {
     }
 
     /**
-     * TODO: Definición de {@code printLog}.
+     * TODO: Description of {@code printLog}.
      *
      * @param logCode
      * @param pos
@@ -243,7 +243,7 @@ public class MainFrame extends javax.swing.JFrame implements RegexConstant {
     }// </editor-fold>//GEN-END:initComponents
 
     /**
-     * TODO: Definición de {@code jMenuItemExitActionPerformed}.
+     * TODO: Description of {@code jMenuItemExitActionPerformed}.
      *
      * @param evt
      */
@@ -252,7 +252,7 @@ public class MainFrame extends javax.swing.JFrame implements RegexConstant {
     }//GEN-LAST:event_jMenuItemExitActionPerformed
 
     /**
-     * TODO: Definición de {@code jButtonValidateRegexActionPerformed}.
+     * TODO: Description of {@code jButtonValidateRegexActionPerformed}.
      *
      * @param evt
      */
@@ -278,7 +278,7 @@ public class MainFrame extends javax.swing.JFrame implements RegexConstant {
     }//GEN-LAST:event_jButtonValidateRegexActionPerformed
 
     /**
-     * TODO: Definición de {@code jMenuItemGenerateAutomatActionPerformed}.
+     * TODO: Description of {@code jMenuItemGenerateAutomatActionPerformed}.
      *
      * @param evt
      */
@@ -303,7 +303,7 @@ public class MainFrame extends javax.swing.JFrame implements RegexConstant {
     }//GEN-LAST:event_jMenuItemGenerateAutomatActionPerformed
 
     /**
-     * TODO: Definición de {@code jMenuItem1ActionPerformed}.
+     * TODO: Description of {@code jMenuItem1ActionPerformed}.
      *
      * @param evt
      */
@@ -320,7 +320,7 @@ public class MainFrame extends javax.swing.JFrame implements RegexConstant {
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     /**
-     * TODO: Definición de {@code jMenuItemCleanLogActionPerformed}.
+     * TODO: Description of {@code jMenuItemCleanLogActionPerformed}.
      *
      * @param evt
      */
@@ -329,7 +329,7 @@ public class MainFrame extends javax.swing.JFrame implements RegexConstant {
     }//GEN-LAST:event_jMenuItemCleanLogActionPerformed
 
     /**
-     * TODO: Definición de {@code jTextRegexActionPerformed}.
+     * TODO: Description of {@code jTextRegexActionPerformed}.
      *
      * @param evt
      */
