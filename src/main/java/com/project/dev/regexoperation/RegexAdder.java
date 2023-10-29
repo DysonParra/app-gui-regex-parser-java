@@ -29,7 +29,7 @@ import com.project.dev.thompson.construction.type.ThompsonUnion;
  * TODO: Definición de {@code RegexAdder}.
  *
  * @author Dyson Parra
- * @since 1.8
+ * @since 11
  */
 public class RegexAdder {
 

@@ -24,7 +24,7 @@ import javax.swing.table.DefaultTableCellRenderer;
  * TODO: Definición de {@code CellModel}.
  *
  * @author Dyson Parra
- * @since 1.8
+ * @since 11
  */
 public class CellModel extends DefaultTableCellRenderer {
 

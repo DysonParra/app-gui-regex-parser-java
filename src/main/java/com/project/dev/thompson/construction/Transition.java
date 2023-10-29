@@ -28,7 +28,7 @@ import lombok.NonNull;
  * TODO: Definición de {@code Transition}.
  *
  * @author Dyson Parra
- * @since 1.8
+ * @since 11
  */
 @AllArgsConstructor
 @Builder

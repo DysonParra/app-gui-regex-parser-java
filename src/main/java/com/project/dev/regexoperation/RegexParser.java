@@ -28,7 +28,7 @@ import java.util.List;
  * TODO: Definición de {@code RegexParser}.
  *
  * @author Dyson Parra
- * @since 1.8
+ * @since 11
  */
 public class RegexParser implements RegexConstant {
 

@@ -20,7 +20,7 @@ import com.project.dev.regexitem.RegexItem;
  * TODO: Definición de {@code RegexPrinter}.
  *
  * @author Dyson Parra
- * @since 1.8
+ * @since 11
  */
 public class RegexPrinter {
 

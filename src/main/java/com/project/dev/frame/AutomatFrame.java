@@ -22,7 +22,7 @@ import javax.swing.JOptionPane;
  * TODO: Definición de {@code AutomatFrame}.
  *
  * @author Dyson Parra
- * @since 1.8
+ * @since 11
  */
 //@AllArgsConstructor
 //@Builder

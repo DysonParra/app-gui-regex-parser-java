@@ -25,7 +25,7 @@ import lombok.NonNull;
  * TODO: Definición de {@code Partition}.
  *
  * @author Dyson Parra
- * @since 1.8
+ * @since 11
  */
 @AllArgsConstructor
 @Builder

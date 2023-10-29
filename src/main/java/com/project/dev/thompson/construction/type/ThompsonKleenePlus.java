@@ -22,7 +22,7 @@ import com.project.dev.thompson.construction.ThompsonConstruction;
  * TODO: Definición de {@code ThompsonKleenePlus}.
  *
  * @author Dyson Parra
- * @since 1.8
+ * @since 11
  */
 public class ThompsonKleenePlus extends ThompsonConstruction {
 

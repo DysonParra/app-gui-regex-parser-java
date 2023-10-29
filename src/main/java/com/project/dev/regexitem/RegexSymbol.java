@@ -18,7 +18,7 @@ package com.project.dev.regexitem;
  * TODO: Definición de {@code RegexSymbol}.
  *
  * @author Dyson Parra
- * @since 1.8
+ * @since 11
  */
 public class RegexSymbol extends RegexItem {
 
