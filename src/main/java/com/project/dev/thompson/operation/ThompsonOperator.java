@@ -691,7 +691,7 @@ public class ThompsonOperator {
         }
 
         ArrayList<Status> simplifiedStatuses = simplifyAutomatStatuses(allStatuses, inputSymbols);
-        Automat automat = Automat.builder()
+        return Automat.builder()
                 .code("")
                 //.statuses(allStatuses)
                 .statuses(simplifiedStatuses)
@@ -699,7 +699,5 @@ public class ThompsonOperator {
                 .endSequence(endSequence)
                 .nullSequence(nullSequence)
                 .build();
-
-        return automat;
     }
 }

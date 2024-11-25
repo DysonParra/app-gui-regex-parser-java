@@ -62,9 +62,7 @@ public class RegexOperator {
         //System.out.println("Uniting...");
         RegexAdder.uniteThompsonConstructions(root, root.findMaxLevel(root.getLevel()));
         //System.out.println("\n");
-
-        ThompsonConstruction thompson = root.getThompson();
-        return thompson;
+        return root.getThompson();
 
     }
 }
